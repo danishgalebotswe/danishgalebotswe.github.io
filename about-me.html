@@ -1,51 +1,143 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
+
 <head>
-<title>Danish Galebotswe Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-    background-color: black;
-    color: white;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Me | Danish Galebotswe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-}
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
 
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
 
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
 
-.topnav a.active {
-    background-color: blue;
-    color: white;
-}
-</style>
+        h2 {
+            color: #007BFF;
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+
+        .about-section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section img {
+            float: right;
+            margin-left: 20px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .about-section p {
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="topnav">
-    <a href="index.html">Home</a>
-    <a href="education.html">Education</a>
-    <a href="projects.html">Projects</a>
-    <a href="work.html"> Work Experience</a>
-    <a class="active" href="about-me.html">About Me</a>
-    <a href="#contact">Contact</a>
-</div>
+    <header>
+        <h1>About Me</h1>
+    </header>
+
+    <div class="container">
+        <section class="about-section">
+            <img src="your-photo.jpg" alt="Danish Galebotswe">
+            <h2>Hi, I'm Danish Galebotswe</h2>
+            <p>
+                I’m a junior studying Mechanical Engineering at Northwestern University, with a strong passion for automotive engineering and aerodynamics. As the Aerodynamics Lead for Northwestern Formula Racing SAE, I lead a team to design, build, and optimize high-performance aerodynamic packages for our Formula Student car.
+            </p>
+            <p>
+                My journey in engineering started with a love for cars and motorsports, which I’ve cultivated through hands-on experience with FSAE and internships in the engineering industry. My goal is to push the boundaries of automotive technology and contribute to the future of high-performance vehicles.
+            </p>
+        </section>
+
+        <section class="about-section">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Engineering Software:</strong> Siemens Star CCM+, SolidWorks, MATLAB</li>
+                <li><strong>Manufacturing:</strong> Injection Molding, Casting, CNC Milling, Additive Manufacturing</li>
+                <li><strong>Project Management:</strong> Click Up, Agile Methods</li>
+                <li><strong>Team Leadership:</strong> Leading an 8-person team for Formula SAE aerodynamics</li>
+            </ul>
+        </section>
+
+        <section class="about-section">
+            <h2>Experience</h2>
+            <p><strong>Aerodynamics Lead - Northwestern Formula Racing SAE (June 2024 - Present)</strong></p>
+            <p>
+                Currently leading a team of 8 to design an aerodynamics package for our Formula Student car. My work involves researching new carbon fiber curing techniques, running CFD simulations in Siemens Star CCM+, and ensuring the project stays on schedule.
+            </p>
+
+            <p><strong>Rear Wing Design Engineer - Northwestern Formula Racing SAE (June 2023 - June 2024)</strong></p>
+            <p>
+                Spearheaded the redesign of the rear wing for drag reduction and improved tire wake management. I worked with CFD tools and conducted multiple iterations to optimize the design.
+            </p>
+
+            <p><strong>Engineering Intern - Asahi Kasei Bioprocess America (June 2023 - September 2024)</strong></p>
+            <p>
+                Worked on engineering projects focused on bioprocess equipment design and testing. Gained experience with technical problem-solving, prototyping, and testing new technologies.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 Danish Galebotswe</p>
+    </footer>
 
 </body>
+
 </html>

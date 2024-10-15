@@ -1,97 +1,175 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
+
 <head>
-<title>Danish Galebotswe Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-    background-color: black;
-    color: white;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Danish Galebotswe | Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-}
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
 
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
+        nav {
+            background-color: #007BFF;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
 
-.topnav a.active {
-    background-color: blue;
-    color: white;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 1.2rem;
+        }
 
-.resume {
-    overflow: hidden;
-    display: inline-block;
-    background-color: blue;
-    align-items: center;
-    padding: 10px;
-}
+        nav a:hover {
+            background-color: #0056b3;
+        }
 
-.resume a {
-    color: white;
-    text-decoration: none;
-}
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+            text-align: center;
+        }
 
-h2 {
-    text-align: center;
-    color: white;
-}
+        section {
+            padding: 50px 0;
+        }
 
-.learn-about-me {
-    float: left;
-    border: 5px solid;
-    display: inline-flexbox;   
-}
+        h2 {
+            color: #007BFF;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
 
+        .hero-section {
+            background-image: url('hero-image.jpg'); /* Replace with your actual image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
 
-</style>
+        .hero-section h1 {
+            font-size: 3rem;
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="topnav">
-    <a class="active" href="index.html">Home</a>
-    <a href="education.html">Education</a>
-    <a href="projects.html">Projects</a>
-    <a href="work.html"> Work Experience</a>
-    <a href="about-me.html">About Me</a>
-    <a href="#contact">Contact</a>
-</div>
+    <!-- Header with Navigation Bar -->
+    <header>
+        <h1>Danish Galebotswe</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about-me.html">About Me</a>
+            <a href="projects.html">Projects</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-<div style="padding-left: 16px;">
-<p style="text-align: center;">If you are in a hurry, you can download my resume by clicking the button.<br>Otherwise, you can view the collection of all my project and work experience.</p>
-<div class="resume">
-    <a href="Danish Galebotswe Resume.pdf">Resume</a>
-</div>
-</div>
+    <!-- Home Section (Landing Page) -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Mechanical Engineering | Automotive Enthusiast | Aerodynamics Specialist</p>
+        </div>
+    </section>
 
-<h2>About me</h2>
+    <!-- About Me Section (Linked to about-me.html) -->
+    <section>
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                I am Danish Galebotswe, a junior studying Mechanical Engineering at Northwestern University. I am passionate about automotive engineering and currently lead the Aerodynamics team for Northwestern Formula Racing SAE.
+                <br><br>
+                <a href="about-me.html" style="color: #007BFF; text-decoration: none; font-weight: bold;">Learn more about me →</a>
+            </p>
+        </div>
+    </section>
 
-<p style="text-align: center;">
-I'm Danish Tiro Galebotswe, a Mechanical Engineering sophomore at Northwestern University, driven by the fusion of design and manufacturing.
-CAD software captivates me as I sculpt intricate designs, and the machine shop is my haven, where these designs materialize into tangible marvels.
-Converting abstract ideas into functional products exhilarates me, fueling my dedication to this field.
-<br>
-Beyond academics, I'm fueled by hands-on creation—whether refining CAD designs or shaping materials in the shop, each step invigorates my passion.
-The blend of theory and practicality in Mechanical Engineering energizes me. As I advance, I eagerly anticipate further exploration at the innovation-practicality nexus.
-My goal? To make a meaningful mark in design and manufacturing, leaving a lasting imprint through my contributions.
-</p>
+    <!-- Projects Section (Linked to projects.html) -->
+    <section>
+        <div class="container">
+            <h2>Projects</h2>
+            <p>
+                From designing the rear wing of our FSAE car to conducting CFD simulations, my projects reflect my hands-on experience in aerodynamics and automotive engineering.
+                <br><br>
+                <a href="projects.html" style="color: #007BFF; text-decoration: none; font-weight: bold;">Explore my projects →</a>
+            </p>
+        </div>
+    </section>
 
+    <!-- Experience Section (Linked to experience.html) -->
+    <section>
+        <div class="container">
+            <h2>Experience</h2>
+            <p>
+                I have interned at Asahi Kasei Bioprocess America and worked as the Aerodynamics Lead for Northwestern Formula Racing SAE, gaining valuable experience in engineering and leadership.
+                <br><br>
+                <a href="experience.html" style="color: #007BFF; text-decoration: none; font-weight: bold;">Check out my experience →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section (Linked to contact.html) -->
+    <section>
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>
+                Have questions or want to connect? Feel free to reach out to me!
+                <br><br>
+                <a href="contact.html" style="color: #007BFF; text-decoration: none; font-weight: bold;">Get in touch →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Danish Galebotswe</p>
+    </footer>
 
 </body>
+
 </html>
