@@ -48,6 +48,20 @@
             background-color: #0056b3;
         }
 
+        /* Media Query: Adjust the navigation layout for smaller screens (phones/tablets) */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;  /* Stack the links vertically on small screens */
+                padding: 5px 0;          /* Reduce padding for smaller devices */
+            }
+
+            nav a {
+                padding: 10px 0;         /* Adjust padding for smaller screens */
+                font-size: 1rem;         /* Reduce font size for better fit */
+                width: 100%;             /* Make the links take full width */
+            }
+        }
+
         .container {
             width: 80%;
             margin: 0 auto;
