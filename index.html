@@ -119,6 +119,20 @@
             background-color: #0056b3;
         }
 
+        /* Default style for larger screens (laptop/desktop) */
+        .responsive-img {
+            max-width: 20%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Media query for smaller screens (phones) */
+        @media (max-width: 768px) {
+            .responsive-img {
+                max-width: 80%; /* Increase size on smaller screens */
+            }
+        }
+
         footer {
             background-color: #333;
             color: white;
@@ -190,7 +204,7 @@
             </p>
         </div>
         <div style="flex: 1; text-align: center;">
-            <img src="Danish Galebotswe Suit.JPG" alt="Project Image" style="max-width: 20%; height: auto; border-radius: 10px;">
+            <img src="Danish Galebotswe Suit.JPG" alt="Project Image" class="responsive-img">
         </div>
     </section>
 
