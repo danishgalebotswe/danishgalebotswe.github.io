@@ -269,7 +269,7 @@ h3 {
 /* Image Placeholder Box */
 .img-placeholder {
     width: 100%;
-    min-height: 200px;
+    min-height: 140px;
     background: linear-gradient(135deg, #f1f3f5 0%, #e9ecef 100%);
     border: 2px dashed #ced4da;
     border-radius: 10px;
@@ -287,13 +287,6 @@ h3 {
 .img-placeholder:hover {
     border-color: #0066cc;
     background: linear-gradient(135deg, #e3f2fd 0%, #d0ebff 100%);
-}
-
-.img-placeholder svg {
-    width: 44px;
-    height: 44px;
-    margin-bottom: 10px;
-    fill: #0066cc;
 }
 
 .img-placeholder span {
