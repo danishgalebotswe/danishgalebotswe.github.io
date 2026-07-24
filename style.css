@@ -133,7 +133,7 @@ h3 {
     margin-bottom: 10px;
 }
 
-/* Quick Jump Table of Contents Box */
+/* Categorized Quick Jump Table of Contents Box */
 .quick-jump-box {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -144,40 +144,62 @@ h3 {
 }
 
 .quick-jump-title {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent-primary);
 }
 
-.quick-jump-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.quick-jump-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
 }
 
-.jump-chip {
-    display: inline-block;
-    background-color: #f1f5f9;
+.quick-jump-col {
+    background-color: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 14px;
+}
+
+.quick-jump-col-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border-color);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.quick-jump-col-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.jump-chip-list {
+    display: block;
+    background-color: #ffffff;
     color: var(--text-primary);
     text-decoration: none;
     font-size: 0.86rem;
     font-weight: 600;
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: 1px solid #cbd5e1;
+    padding: 7px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
     transition: all 0.2s ease;
 }
 
-.jump-chip:hover {
+.jump-chip-list:hover {
     background-color: var(--accent-primary);
     color: #ffffff;
     border-color: var(--accent-primary);
-    transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(29, 78, 216, 0.25);
+    transform: translateX(3px);
 }
 
 /* Hero Section */
@@ -520,5 +542,9 @@ footer p {
     .container {
         width: 95%;
         padding: 24px 12px;
+    }
+
+    .quick-jump-cols {
+        grid-template-columns: 1fr;
     }
 }
