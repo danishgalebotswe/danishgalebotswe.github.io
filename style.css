@@ -5,6 +5,15 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure anchor target offset accounts for sticky header */
+.project[id], .experience[id], .category-heading[id] {
+    scroll-margin-top: 100px;
+}
+
 :root {
     --bg-canvas: #f8fafc;
     --bg-card: #ffffff;
@@ -122,6 +131,53 @@ h3 {
     font-size: 1.35rem;
     font-weight: 700;
     margin-bottom: 10px;
+}
+
+/* Quick Jump Table of Contents Box */
+.quick-jump-box {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 0 0 36px 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.quick-jump-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quick-jump-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.jump-chip {
+    display: inline-block;
+    background-color: #f1f5f9;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.86rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #cbd5e1;
+    transition: all 0.2s ease;
+}
+
+.jump-chip:hover {
+    background-color: var(--accent-primary);
+    color: #ffffff;
+    border-color: var(--accent-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(29, 78, 216, 0.25);
 }
 
 /* Hero Section */

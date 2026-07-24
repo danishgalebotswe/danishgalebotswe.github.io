@@ -27,14 +27,39 @@
 
     <div class="container">
         <h2>Engineering Projects</h2>
-        <p style="text-align: center; color: #6c757d; max-width: 800px; margin: -15px auto 30px auto;">
+        <p style="text-align: center; color: #6c757d; max-width: 800px; margin: -15px auto 25px auto;">
             A showcase of my work spanning aerodynamic CFD optimization, CAD/CAM manufacturing, mechatronics, finite element structural analysis, and machine learning.
         </p>
 
-        <!-- Category: Aerodynamics & CFD -->
-        <h3 class="category-heading">Aerodynamics & Computational Fluid Dynamics (CFD)</h3>
+        <!-- Quick Jump Table of Contents Bar -->
+        <div class="quick-jump-box">
+            <div class="quick-jump-title">
+                <span>Quick Jump to Project:</span>
+            </div>
+            <div class="quick-jump-grid">
+                <a href="#fsae-aero-package" class="jump-chip">FSAE Aero Package</a>
+                <a href="#rear-wing-redesign" class="jump-chip">Rear Wing Redesign</a>
+                <a href="#shrouded-fan-opt" class="jump-chip">Shrouded Fan CFD Opt</a>
+                <a href="#airspeed-pcb" class="jump-chip">Airspeed Sensors PCB</a>
+                <a href="#tower-crane-fea" class="jump-chip">50m Tower Crane FEA</a>
+                <a href="#gear-transmission" class="jump-chip">3-Shaft Gear System</a>
+                <a href="#diff-mounts-top" class="jump-chip">Differential Mounts FEA</a>
+                <a href="#cnc-mouse-milling" class="jump-chip">CNC Mouse Milling (Haas)</a>
+                <a href="#pixel7-dfam-case" class="jump-chip">Pixel 7 DfAM Case</a>
+                <a href="#injection-molding-mold" class="jump-chip">Injection Mold Tooling</a>
+                <a href="#motor-pid-control" class="jump-chip">Closed-Loop Motor PID</a>
+                <a href="#ball-kicking-robot" class="jump-chip">Ball Kicking Robot</a>
+                <a href="#captive-water-window" class="jump-chip">Captive Water Window</a>
+                <a href="#fsae-tire-ml" class="jump-chip">PyTorch FSAE Tire ML</a>
+                <a href="#afm-surface-metrology" class="jump-chip">AFM Surface Metrology</a>
+                <a href="#wheelchair-mirror" class="jump-chip">Catheterization Mirror</a>
+            </div>
+        </div>
 
-        <div class="project">
+        <!-- Category: Aerodynamics & CFD -->
+        <h3 class="category-heading" id="cat-aero">Aerodynamics & Computational Fluid Dynamics (CFD)</h3>
+
+        <div class="project" id="fsae-aero-package">
             <div class="project-header">
                 <h3>Aerodynamics Package & Full-Car CFD Aero Mapping</h3>
                 <span class="project-date">June 2024 – June 2025</span>
@@ -59,7 +84,7 @@
             </div>
         </div>
 
-        <div class="project">
+        <div class="project" id="rear-wing-redesign">
             <div class="project-header">
                 <h3>Rear Wing Redesign & Tire Wake Management</h3>
                 <span class="project-date">June 2023 – June 2024</span>
@@ -82,7 +107,7 @@
             </div>
         </div>
 
-        <div class="project">
+        <div class="project" id="shrouded-fan-opt">
             <div class="project-header">
                 <h3>Shrouded Fan Aerodynamic Bayesian Optimization</h3>
                 <span class="project-date">January 2025 – March 2025</span>
@@ -107,7 +132,7 @@
             </div>
         </div>
 
-        <div class="project">
+        <div class="project" id="airspeed-pcb">
             <div class="project-header">
                 <h3>Airspeed Sensors Printed Circuit Board (PCB)</h3>
                 <span class="project-date">June 2025 – June 2026</span>
@@ -130,9 +155,9 @@
         </div>
 
         <!-- Category: CAD, Structural & Mechanical Design -->
-        <h3 class="category-heading">CAD, Structural Analysis & Mechanical Systems</h3>
+        <h3 class="category-heading" id="cat-cad">CAD, Structural Analysis & Mechanical Systems</h3>
 
-        <div class="project">
+        <div class="project" id="tower-crane-fea">
             <div class="project-header">
                 <h3>50m Tower Crane Structural & Buckling Analysis</h3>
                 <span class="project-date">April 2025 – June 2025</span>
@@ -157,7 +182,7 @@
             </div>
         </div>
 
-        <div class="project">
+        <div class="project" id="gear-transmission">
             <div class="project-header">
                 <h3>Three-Shaft Gear Transmission System</h3>
                 <span class="project-date">September 2024 – December 2024</span>
@@ -182,7 +207,7 @@
             </div>
         </div>
 
-        <div class="project">
+        <div class="project" id="diff-mounts-top">
             <div class="project-header">
                 <h3>FSAE Differential Mounts Topology Optimization</h3>
                 <span class="project-date">September 2022 – June 2023</span>
@@ -206,9 +231,9 @@
         </div>
 
         <!-- Category: Manufacturing & CNC -->
-        <h3 class="category-heading">Manufacturing Processes, CNC & Rapid Prototyping</h3>
+        <h3 class="category-heading" id="cat-mfg">Manufacturing Processes, CNC & Rapid Prototyping</h3>
 
-        <div class="project">
+        <div class="project" id="cnc-mouse-milling">
             <div class="project-header">
                 <h3>CNC Mouse Component Design & Haas VF-2 Manufacturing</h3>
                 <span class="project-date">March 2026 – June 2026</span>
@@ -233,7 +258,7 @@
             </div>
         </div>
 
-        <div class="project">
+        <div class="project" id="pixel7-dfam-case">
             <div class="project-header">
                 <h3>Google Pixel 7 Case & Fan Accessory (DfAM)</h3>
                 <span class="project-date">May 2026 – June 2026</span>
@@ -258,7 +283,7 @@
             </div>
         </div>
 
-        <div class="project">
+        <div class="project" id="injection-molding-mold">
             <div class="project-header">
                 <h3>Plastic Injection Molding Aluminum Mold Tooling</h3>
                 <span class="project-date">April 2025 – June 2025</span>
@@ -282,9 +307,9 @@
         </div>
 
         <!-- Category: Mechatronics & Control Systems -->
-        <h3 class="category-heading">Mechatronics, Embedded Control & Thermal Systems</h3>
+        <h3 class="category-heading" id="cat-mechatronics">Mechatronics, Embedded Control & Thermal Systems</h3>
 
-        <div class="project">
+        <div class="project" id="motor-pid-control">
             <div class="project-header">
                 <h3>Closed-Loop Motor Control System</h3>
                 <span class="project-date">January 2025 – March 2025</span>
@@ -308,7 +333,7 @@
             </div>
         </div>
 
-        <div class="project">
+        <div class="project" id="ball-kicking-robot">
             <div class="project-header">
                 <h3>Line-Following Ball Kicking Robot</h3>
                 <span class="project-date">March 2023 – June 2023</span>
@@ -332,7 +357,7 @@
             </div>
         </div>
 
-        <div class="project">
+        <div class="project" id="captive-water-window">
             <div class="project-header">
                 <h3>Captive Water Window Thermal Cooling System</h3>
                 <span class="project-date">September 2025 – March 2025</span>
@@ -357,9 +382,9 @@
         </div>
 
         <!-- Category: ML & Materials Science -->
-        <h3 class="category-heading">Machine Learning & Materials Characterization</h3>
+        <h3 class="category-heading" id="cat-ml">Machine Learning & Materials Characterization</h3>
 
-        <div class="project">
+        <div class="project" id="fsae-tire-ml">
             <div class="project-header">
                 <h3>FSAE Tire Force Prediction via PyTorch Neural Networks</h3>
                 <span class="project-date">March 2026 – June 2026</span>
@@ -383,7 +408,7 @@
             </div>
         </div>
 
-        <div class="project">
+        <div class="project" id="afm-surface-metrology">
             <div class="project-header">
                 <h3>Atomic Force Microscopy (AFM) Surface Metrology</h3>
                 <span class="project-date">March 2026 – June 2026</span>
@@ -407,9 +432,9 @@
         </div>
 
         <!-- Category: Human-Centered Design -->
-        <h3 class="category-heading">Human-Centered Design & Medical Accessories</h3>
+        <h3 class="category-heading" id="cat-hcd">Human-Centered Design & Medical Accessories</h3>
 
-        <div class="project">
+        <div class="project" id="wheelchair-mirror">
             <div class="project-header">
                 <h3>Wheelchair Self-Catheterization Mirror (55% Time Reduction)</h3>
                 <span class="project-date">September 2022 – December 2022</span>
