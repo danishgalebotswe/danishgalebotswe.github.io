@@ -11,9 +11,9 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Scroll Offset for Header */
+/* Scroll Offset for Sticky Navbar */
 .project[id], .experience[id], .category-heading[id] {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 60px;
 }
 
 :root {
@@ -51,12 +51,8 @@ body {
 header {
     background-color: var(--header-bg);
     color: #ffffff;
-    padding: 24px 0 0 0;
+    padding: 24px 16px 0 16px;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.15);
 }
 
 header h1 {
@@ -83,10 +79,15 @@ nav, .navbar {
     padding: 0;
     margin-top: 16px;
     border-top: 1px solid #334155;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.2);
 }
 
 .nav-links {
     display: flex;
+    flex-direction: row;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -105,11 +106,12 @@ nav a, .nav-links a {
     display: inline-block;
     color: #cbd5e1;
     text-decoration: none;
-    padding: 14px 24px;
+    padding: 12px 20px;
     font-size: 0.92rem;
     font-weight: 500;
     letter-spacing: 0.2px;
     transition: all 0.2s ease;
+    white-space: nowrap;
 }
 
 nav a:hover, .nav-links a:hover, nav a.active, .nav-links a.active {
@@ -602,22 +604,35 @@ footer a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header {
+        padding: 16px 12px 0 12px;
+    }
+
     header h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+    }
+
+    header p {
+        font-size: 0.85rem;
+        margin: 4px 0 10px 0;
     }
 
     nav, .navbar {
-        flex-direction: column;
+        margin-top: 10px;
+        flex-direction: row;
     }
 
     .nav-links {
-        flex-direction: column;
-        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: auto;
+        justify-content: center;
     }
 
     nav a, .nav-links a {
-        padding: 12px;
-        width: 100%;
+        padding: 10px 12px;
+        width: auto;
+        font-size: 0.85rem;
         text-align: center;
     }
 
@@ -628,11 +643,11 @@ footer a:hover {
     }
 
     .hero-section h1, .hero h2 {
-        font-size: 2.1rem;
+        font-size: 1.8rem;
     }
 
     .hero-section p, .hero p {
-        font-size: 1.05rem;
+        font-size: 0.98rem;
     }
 
     .container {
@@ -656,6 +671,17 @@ footer a:hover {
 
     .cta-buttons a {
         justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.35rem;
+    }
+
+    nav a, .nav-links a {
+        padding: 8px 10px;
+        font-size: 0.78rem;
     }
 }
 
