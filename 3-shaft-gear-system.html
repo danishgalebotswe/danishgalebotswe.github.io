@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Three-Shaft Gear Transmission System | Danish Galebotswe</title>
+    <meta name="description"
+        content="In-depth mechanical design and analysis report for a 60 kW three-shaft gear transmission system with speed reduction from 2700 to 400 rpm, AGMA gear fatigue calculations, and SKF bearing selection by Danish Galebotswe.">
+    <link rel="stylesheet" href="style.css?v=4">
+</head>
+
+<body>
+
+    <header>
+        <h1>Danish Galebotswe</h1>
+        <p>Mechanical Engineering | Aerodynamics | CAD/CAM | Mechatronics | Machine Learning</p>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- Back to Projects Navigation Bar -->
+        <div class="back-link-bar">
+            <a href="projects.html#gear-transmission" class="btn-back">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Projects
+            </a>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="project-detail-hero">
+            <div class="project-meta-pills">
+                <span class="meta-pill">MECH ENG 315 Design Project</span>
+                <span class="meta-pill">Shaft 1 & System Engineer</span>
+                <span class="meta-pill">Fall 2024</span>
+            </div>
+            <h1 style="margin-top: 14px;">Three-Shaft Gear Transmission System</h1>
+            <p class="subtitle">
+                Complete design, AGMA gear kinematics, Goodman fatigue shaft analysis, SKF bearing life sizing, and CAD assembly modeling for a 60 kW power transmission gearbox.
+            </p>
+            <div class="tags" style="margin-bottom: 0;">
+                <span class="tag"
+                    style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">60 kW Power Transmission</span>
+                <span class="tag"
+                    style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">AGMA Bending & Contact Fatigue</span>
+                <span class="tag"
+                    style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">Goodman Shaft Fatigue</span>
+                <span class="tag"
+                    style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">SKF Deep Groove Bearings</span>
+            </div>
+        </div>
+
+        <!-- Report Download Bar -->
+        <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 12px; padding: 20px 24px; margin-bottom: 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; box-shadow: var(--shadow-sm);">
+            <div>
+                <h4 style="font-family: var(--font-heading); margin-bottom: 4px; color: var(--text-primary); font-size: 1.1rem;">Full Engineering Final Report</h4>
+                <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Authors: Danish Galebotswe (Shaft 1), Lochlan McGinnis (Shaft 2), Daniel Lechuga (Shaft 3) [MECH ENG 315]</p>
+            </div>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="Project Media/3-Shaft Gear System/ME 315 Design Project - Galebotswe - McGinnis - Lechuga.pdf" target="_blank" class="btn-project-report" style="background-color: #1e40af; border-color: #1e40af; color: #ffffff; display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Download PDF Report
+                </a>
+                <a href="Project Media/3-Shaft Gear System/ME 315 Design Project - Galebotswe - McGinnis - Lechuga.docx" target="_blank" class="btn-project-report" style="background-color: #f1f5f9; border-color: #cbd5e1; color: #1e293b; display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Download Word Doc
+                </a>
+            </div>
+        </div>
+
+        <!-- Key Metrics Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="number">60 kW</div>
+                <div class="label">Input Power Transmitted</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">2700 → 400 RPM</div>
+                <div class="label">Speed Reduction (Actual: 399.94 RPM)</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">99% Reliability</div>
+                <div class="label">Targeted 5-Year Operating Life</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">405 mm</div>
+                <div class="label">Total Centerline Distance AC (195 + 210 mm)</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">1.15 min FoS</div>
+                <div class="label">Minimum AGMA Contact & Fatigue FoS</div>
+            </div>
+        </div>
+
+        <!-- Section 1: Introduction & System Scope -->
+        <div class="about-section">
+            <h2>Executive Summary & System Requirements</h2>
+            <p>
+                This report documents the design of a compact, highly reliable three-shaft gear train system that transmits <strong>60 kW of input power</strong> from an electric motor operating at <strong>2700 RPM</strong> (Shaft A) to an output shaft (Shaft C) operating at <strong>399.94 RPM</strong> (targeting 400 ± 3 RPM).
+            </p>
+            <p>
+                The design targets <strong>99% operational reliability</strong> for continuous operation over a 5-year service life. The team achieved an optimized layout minimizing total shaft centerline distance (AC = 405 mm) while ensuring all gears, shafts, and SKF ball bearings exceed strict bending, surface fatigue, and static yield limits.
+            </p>
+        </div>
+
+        <!-- Section 2: Gear Train Parameters & Kinematics -->
+        <div class="about-section">
+            <h2>Gear Kinematic & Stress Analysis</h2>
+            <p>
+                Two double-reduction spur gear pairs were designed with a standard 5 mm module and 20° pressure angle. Gears 1 and 3 were manufactured from heat-treated AISI 4140 steel, while driven Gears 2 and 4 were fabricated from quenched & tempered AISI 1045 steel.
+            </p>
+
+            <div class="tech-table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Gear 1 (Input)</th>
+                            <th>Gear 2 (Intermediate)</th>
+                            <th>Gear 3 (Intermediate)</th>
+                            <th>Gear 4 (Output)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Gear Type & Module</strong></td>
+                            <td>Spur, m = 5 mm</td>
+                            <td>Spur, m = 5 mm</td>
+                            <td>Spur, m = 5 mm</td>
+                            <td>Spur, m = 5 mm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Teeth Count (N)</strong></td>
+                            <td>22 Teeth</td>
+                            <td>56 Teeth</td>
+                            <td>23 Teeth</td>
+                            <td>61 Teeth</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pitch Circle Diameter</strong></td>
+                            <td>110.0 mm</td>
+                            <td>280.0 mm</td>
+                            <td>115.0 mm</td>
+                            <td>305.0 mm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rotational Speed</strong></td>
+                            <td>2700.0 RPM</td>
+                            <td>1060.71 RPM</td>
+                            <td>1060.71 RPM</td>
+                            <td>399.94 RPM</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Torque Transmitted</strong></td>
+                            <td>212.21 Nm</td>
+                            <td>540.16 Nm</td>
+                            <td>540.16 Nm</td>
+                            <td>1432.60 Nm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tangential Force (W<sub>t</sub>)</strong></td>
+                            <td>3858.3 N</td>
+                            <td>3858.3 N</td>
+                            <td>9394.1 N</td>
+                            <td>9394.1 N</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Radial Force (W<sub>r</sub>)</strong></td>
+                            <td>1404.3 N</td>
+                            <td>1404.3 N</td>
+                            <td>3419.2 N</td>
+                            <td>3419.2 N</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Material & Hardness</strong></td>
+                            <td>AISI 4140 (578 HB)</td>
+                            <td>AISI 1045 (450 HB)</td>
+                            <td>AISI 4140 (578 HB)</td>
+                            <td>AISI 1045 (450 HB)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bending Factor of Safety</strong></td>
+                            <td>5.85</td>
+                            <td>4.56</td>
+                            <td>2.45</td>
+                            <td>2.17</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contact Surface FoS</strong></td>
+                            <td>2.04</td>
+                            <td>1.55</td>
+                            <td>1.43</td>
+                            <td>1.15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 3: Shaft Fatigue & Structural Sizing -->
+        <div class="about-section">
+            <h2>Shaft Fatigue Analysis (Goodman Criterion)</h2>
+            <p>
+                All three shafts were engineered using hot-rolled <strong>AISI 1020 steel</strong> (S<sub>ut</sub> = 420 MPa, S<sub>y</sub> = 350 MPa). Fatigue stress concentration factors for shoulder fillets and keyways were fully accounted for under combined bending and torsion loads.
+            </p>
+
+            <div class="tech-table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Shaft 1 (Input - Danish)</th>
+                            <th>Shaft 2 (Intermediate - Lochlan)</th>
+                            <th>Shaft 3 (Output - Daniel)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Operating Speed</strong></td>
+                            <td>2700 RPM</td>
+                            <td>1060.71 RPM</td>
+                            <td>399.94 RPM</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Max Torque</strong></td>
+                            <td>212.21 Nm</td>
+                            <td>540.16 Nm</td>
+                            <td>1432.60 Nm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Max Bending Moment</strong></td>
+                            <td>127.00 Nm</td>
+                            <td>235.04 Nm</td>
+                            <td>377.69 Nm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Critical Location</strong></td>
+                            <td>At Gear 1 Keyway</td>
+                            <td>At Gear 3 Keyway</td>
+                            <td>At Gear 4 Keyway</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Goodman Fatigue FoS</strong></td>
+                            <td><strong>2.35</strong></td>
+                            <td><strong>4.39</strong></td>
+                            <td><strong>1.38</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Yield Factor of Safety</strong></td>
+                            <td>5.99</td>
+                            <td>7.67</td>
+                            <td>2.18</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fatigue Life Expectancy</strong></td>
+                            <td>Infinite (&gt; 10<sup>7</sup> cycles)</td>
+                            <td>Infinite (&gt; 10<sup>7</sup> cycles)</td>
+                            <td>Infinite (&gt; 10<sup>7</sup> cycles)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 4: Bearing Selection & Maintenance Operations -->
+        <div class="about-section">
+            <h2>SKF Bearing Selection & Maintenance Plan</h2>
+            <p>
+                SKF Deep Groove Ball Bearings were selected across all three shafts due to zero axial thrust load generation from spur gears and low frictional torque at high input speeds (2700 RPM).
+            </p>
+
+            <div class="tech-table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Shaft / Position</th>
+                            <th>Bearing Spec</th>
+                            <th>Bore (ID)</th>
+                            <th>Outer Dia (OD)</th>
+                            <th>Radial Load</th>
+                            <th>Dynamic Rating C</th>
+                            <th>Calculated L<sub>10h</sub> Life</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Shaft 1 (A & B)</strong></td>
+                            <td>SKF 6309</td>
+                            <td>45 mm</td>
+                            <td>100 mm</td>
+                            <td>15.58 kN / 46.78 kN</td>
+                            <td>52.7 kN</td>
+                            <td><strong>2,358.7 Million revs (&gt;5 yrs)</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Shaft 2 (C & D)</strong></td>
+                            <td>SKF 6410</td>
+                            <td>50 mm</td>
+                            <td>130 mm</td>
+                            <td>58.48 kN / 79.02 kN</td>
+                            <td>81.7 kN</td>
+                            <td><strong>926.6 Million revs (&gt;5 yrs)</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Shaft 3 (E & F)</strong></td>
+                            <td>SKF 6309</td>
+                            <td>45 mm</td>
+                            <td>100 mm</td>
+                            <td>45.86 kN / 52.08 kN</td>
+                            <td>52.7 kN</td>
+                            <td><strong>349.4 Million revs (&gt;5 yrs)</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="category-heading" style="font-size: 1.15rem; margin-top: 24px;">Maintenance & Operational Strategy</h3>
+            <ul class="project-bullets">
+                <li><strong>Zero Bearing Replacement:</strong> Calculated bearing life exceeds the 5-year continuous service benchmark, requiring no mid-life replacement services.</li>
+                <li><strong>Annual Oil Lubrication Cycle:</strong> Recommended annual gear oil drainage and refill; fitted with elastomeric felt seals to protect against particle ingress and oil leakage.</li>
+                <li><strong>Standardized Components:</strong> Standardized SKF 6309 bearings on input and output shafts reduce assembly tooling complexity and inventory costs.</li>
+            </ul>
+        </div>
+
+        <!-- Section 5: Gallery -->
+        <div class="about-section">
+            <h2>SolidWorks 3D Assembly & Technical Drawings</h2>
+            <div class="media-gallery-grid">
+                <figure class="figure-card contain-img">
+                    <img src="Project Media/3-Shaft Gear System/images/image12.png" alt="3D Gearbox Exploded View CAD Model">
+                    <figcaption>
+                        <strong>3D Gearbox CAD Exploded View</strong>
+                        Complete 3D SolidWorks model detailing spur gear meshes, stepped shafts, SKF ball bearings, keyways, and casing spacers.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="Project Media/3-Shaft Gear System/images/image6.png" alt="Shaft 1 Mechanical Drawing">
+                    <figcaption>
+                        <strong>Shaft 1 Engineering Drawing (Danish Galebotswe)</strong>
+                        Detailed manufacturing drawing for Shaft 1 featuring shoulder radii, keyway dimensions, and bearing press-fit tolerances.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="Project Media/3-Shaft Gear System/images/image7.png" alt="Gear Transmission Force Diagram">
+                    <figcaption>
+                        <strong>Gear Train Transmission & Force Schematic</strong>
+                        Pitch circle geometry, power flow paths, and tangential/radial force vectors across Shafts A, B, and C.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="Project Media/3-Shaft Gear System/images/image21.png" alt="Full Gearbox Assembly Layout">
+                    <figcaption>
+                        <strong>Complete Transmission Assembly CAD</strong>
+                        Compact assembly layout achieving a total centerline distance of 405 mm between input and output shafts.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons Footer -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px; flex-wrap: wrap; gap: 16px;">
+            <a href="projects.html#gear-transmission" class="btn-back">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Projects
+            </a>
+            <a href="differential-mounts-fea.html" class="btn-project-report">
+                Next Project Report: FSAE Differential Mounts Topology Optimization & FEA →
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:danishgalebotswe2026@u.northwestern.edu">Email: danishgalebotswe2026@u.northwestern.edu</a>
+            <a href="https://www.linkedin.com/in/danish-galebotswe/" target="_blank">LinkedIn Profile</a>
+            <a href="Danish Galebotswe Resume.pdf" target="_blank">Resume PDF</a>
+        </div>
+        <p>© 2026 Danish Galebotswe | Mechanical Engineering Portfolio</p>
+    </footer>
+
+</body>
+
+</html>

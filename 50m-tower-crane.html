@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>50m Tower Crane Structural & Buckling Analysis | Danish Galebotswe</title>
+    <meta name="description"
+        content="Technical report and FEA structural validation for a 50m tower crane designed to lift 25-tonne loads, compliant with ASME B30.3, EN 14439, and DIN 15018-1 standards by Danish Galebotswe.">
+    <link rel="stylesheet" href="style.css?v=4">
+</head>
+
+<body>
+
+    <header>
+        <h1>Danish Galebotswe</h1>
+        <p>Mechanical Engineering | Aerodynamics | CAD/CAM | Mechatronics | Machine Learning</p>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- Back to Projects Navigation Bar -->
+        <div class="back-link-bar">
+            <a href="projects.html#tower-crane-fea" class="btn-back">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Projects
+            </a>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="project-detail-hero">
+            <div class="project-meta-pills">
+                <span class="meta-pill">MECH ENG 362 Design Project</span>
+                <span class="meta-pill">Structural Engineer</span>
+                <span class="meta-pill">June 2025</span>
+            </div>
+            <h1 style="margin-top: 14px;">50m Tower Crane Structural & Buckling Analysis</h1>
+            <p class="subtitle">
+                Complete CAD modeling, finite element analysis (FEA), extreme wind loading, thermal contraction/expansion,
+                and Euler buckling verification for a 50m tower crane inspired by the Kellogg crane.
+            </p>
+            <div class="tags" style="margin-bottom: 0;">
+                <span class="tag"
+                    style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">ANSYS FEA</span>
+                <span class="tag"
+                    style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">ASME B30.3 & EN 14439</span>
+                <span class="tag"
+                    style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">DIN 15018-1 Standard</span>
+                <span class="tag"
+                    style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">Structural Steel St 52-3</span>
+            </div>
+        </div>
+
+        <!-- Report Download Bar -->
+        <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 12px; padding: 20px 24px; margin-bottom: 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; box-shadow: var(--shadow-sm);">
+            <div>
+                <h4 style="font-family: var(--font-heading); margin-bottom: 4px; color: var(--text-primary); font-size: 1.1rem;">Full Engineering Final Report</h4>
+                <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Authors: Nico Antezano, Danish Galebotswe, Irvin Ma, Lochlan McGinnis (MECH ENG 362)</p>
+            </div>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="Project Media/50m Tower Crane FEA/ME362 Final Report.pdf" target="_blank" class="btn-project-report" style="background-color: #1e40af; border-color: #1e40af; color: #ffffff; display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Download PDF Report
+                </a>
+                <a href="Project Media/50m Tower Crane FEA/ME362 Final Report.docx" target="_blank" class="btn-project-report" style="background-color: #f1f5f9; border-color: #cbd5e1; color: #1e293b; display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Download Word Doc
+                </a>
+            </div>
+        </div>
+
+        <!-- Key Metrics Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="number">25 Tonnes</div>
+                <div class="label">Maximum Hook Load Capacity</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">50 Meters</div>
+                <div class="label">Total Crane Structure Height</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">0.31 m</div>
+                <div class="label">Max Jib Deflection (Limit: 0.3867 m)</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">257.9 MPa</div>
+                <div class="label">Max Structural Stress (Yield: 360 MPa)</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">12.2 kPa</div>
+                <div class="label">100 mph Extreme Wind Load Pressure</div>
+            </div>
+        </div>
+
+        <!-- Section 1: Executive Summary & Standards -->
+        <div class="about-section">
+            <h2>Executive Summary & Design Standards</h2>
+            <p>
+                The objective of this project was to design a high-capacity 50-meter tower crane inspired by the Kellogg crane, matching its footprint while delivering superior structural performance, thermal resilience, and stability under extreme wind conditions.
+            </p>
+            <p>
+                Structural proof of strength and safety compliance was governed by <strong>ASME B30.3-2019 Section 3-1.1</strong>, <strong>EN 14439:2006+A2 Section 5.2</strong>, and <strong>DIN 15018-1</strong>. Deflection criteria were established per CISC Design Guide 7 (Industrial Building Design, Section 2.2), restricting total vertical tip deflection to less than <strong>0.3867 m</strong>.
+            </p>
+
+            <div class="tech-table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Design Target / Value</th>
+                            <th>Reference Standard</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tower Base Footprint</strong></td>
+                            <td>2.5 m x 2.5 m square lattice column</td>
+                            <td>Kellogg Crane Benchmark</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Column Height</strong></td>
+                            <td>40.0 m vertical tower mast</td>
+                            <td>Structural Constraint</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Boom Dimensions</strong></td>
+                            <td>Front Jib: 87 m | Rear Jib: 29 m</td>
+                            <td>ASME B30.3-2019</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rated Hook Load</strong></td>
+                            <td>25 Metric Tons (245.25 kN) at 87m radius</td>
+                            <td>EN 14439:2006+A2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Counterweight</strong></td>
+                            <td>30 Metric Tons (294.3 kN) rear ballast</td>
+                            <td>Bending Moment Balance</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Material</strong></td>
+                            <td>Structural Steel St 52-3 (Yield = 360 MPa)</td>
+                            <td>DIN 15018-1 Table 1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Max Deflection Limit</strong></td>
+                            <td>δ<sub>max</sub> ≤ 0.3867 m</td>
+                            <td>CISC Design Guide 7 Sec 2.2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 2: FEA Results & Structural Validation -->
+        <div class="about-section">
+            <h2>FEA Results & Structural Safety Validation</h2>
+            <p>
+                The structural model was partitioned into two subsystems: the <strong>Top Section (Jib & Counter-Jib Boom)</strong> and the <strong>Bottom Section (40m Lattice Column)</strong>. ANSYS FEA was used to evaluate four critical load cases: Full Hook Load, 100 mph Wind Load (12.2 kPa), Winter Thermal Contraction (-27°F), and Summer Thermal Expansion (105°F).
+            </p>
+
+            <h3 class="category-heading" style="font-size: 1.2rem; margin-top: 24px;">Top Section (Jib Boom) FEA Summary</h3>
+            <div class="tech-table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Load Case</th>
+                            <th>Max Deflection</th>
+                            <th>Max Stress</th>
+                            <th>Deflection Limit</th>
+                            <th>Yield Limit</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Hook Load (25t)</strong></td>
+                            <td>0.31 m @ Jib Tip</td>
+                            <td>46.8 MPa @ Column Joint</td>
+                            <td>0.3867 m</td>
+                            <td>360.0 MPa</td>
+                            <td><span style="color: #16a34a; font-weight: 700;">✅ PASS</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Wind Load (100 mph)</strong></td>
+                            <td>0.14 m @ Jib Tip</td>
+                            <td>25.4 MPa @ Column Joint</td>
+                            <td>0.3867 m</td>
+                            <td>360.0 MPa</td>
+                            <td><span style="color: #16a34a; font-weight: 700;">✅ PASS</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Winter (-27°F)</strong></td>
+                            <td>0.25 m @ Jib Tip</td>
+                            <td>138.0 MPa @ Joint</td>
+                            <td>0.3867 m</td>
+                            <td>360.0 MPa</td>
+                            <td><span style="color: #16a34a; font-weight: 700;">✅ PASS</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Summer (105°F)</strong></td>
+                            <td>0.15 m @ Jib Tip</td>
+                            <td>46.8 MPa @ Joint</td>
+                            <td>0.3867 m</td>
+                            <td>360.0 MPa</td>
+                            <td><span style="color: #16a34a; font-weight: 700;">✅ PASS</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="category-heading" style="font-size: 1.2rem; margin-top: 24px;">Bottom Section (Vertical Tower Column) FEA Summary</h3>
+            <div class="tech-table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Load Case</th>
+                            <th>Max Vertical Deflection</th>
+                            <th>Max Stress</th>
+                            <th>Deflection Limit</th>
+                            <th>Yield Limit</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Hook Load (25t)</strong></td>
+                            <td>0.05 m @ Column Top</td>
+                            <td>257.9 MPa @ Lower Base</td>
+                            <td>0.3867 m</td>
+                            <td>360.0 MPa</td>
+                            <td><span style="color: #16a34a; font-weight: 700;">✅ PASS (FoS = 1.4)</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Wind Load (100 mph)</strong></td>
+                            <td>0.04 m @ Column Top</td>
+                            <td>189.1 MPa @ Lower Base</td>
+                            <td>0.3867 m</td>
+                            <td>360.0 MPa</td>
+                            <td><span style="color: #16a34a; font-weight: 700;">✅ PASS (FoS = 1.9)</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Winter (-27°F)</strong></td>
+                            <td>0.06 m @ Column Top</td>
+                            <td>172.1 MPa @ Lower Base</td>
+                            <td>0.3867 m</td>
+                            <td>360.0 MPa</td>
+                            <td><span style="color: #16a34a; font-weight: 700;">✅ PASS</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Summer (105°F)</strong></td>
+                            <td>0.04 m @ Column Top</td>
+                            <td>170.3 MPa @ Lower Base</td>
+                            <td>0.3867 m</td>
+                            <td>360.0 MPa</td>
+                            <td><span style="color: #16a34a; font-weight: 700;">✅ PASS</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 3: Buckling & Analytical Proof -->
+        <div class="about-section">
+            <h2>Euler Buckling & Parallel Axis Theorem Proof</h2>
+            <p>
+                To guarantee absolute column stability under combined dead weight, jib moment, and 25-tonne payload, an Euler buckling analysis was conducted on the 40m 4-column tower system assuming fixed-free boundary conditions.
+            </p>
+
+            <div class="math-box">
+                Parallel Axis Theorem for Column Group Moment of Inertia:<br>
+                I<sub>total</sub> = 4 × (I<sub>self</sub> + A × d<sup>2</sup>)<br><br>
+                Euler Critical Buckling Load:<br>
+                P<sub>cr</sub> = (π<sup>2</sup> · E · I<sub>total</sub>) / (K · L)<sup>2</sup><br><br>
+                Where K = 2.0 (Fixed-Free condition), L = 40 m, E = 210 GPa (St 52-3 Steel).<br>
+                <strong>Result: P<sub>cr</sub> >> P<sub>applied</sub>, confirming 0% risk of elastic buckling failure.</strong>
+            </div>
+        </div>
+
+        <!-- Section 4: FEA Visual Gallery -->
+        <div class="about-section">
+            <h2>FEA Contour Visualizations & CAD Layout</h2>
+            <div class="media-gallery-grid">
+                <figure class="figure-card contain-img">
+                    <img src="Project Media/50m Tower Crane FEA/images/image38.png" alt="50m Tower Crane FEA CAD Overview">
+                    <figcaption>
+                        <strong>50m Tower Crane CAD Overview</strong>
+                        Full assembly model featuring 40m lattice tower mast, 87m front jib boom, and 29m counter-jib.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="Project Media/50m Tower Crane FEA/images/image16.png" alt="Hook Load Direct Stress Contour Plot">
+                    <figcaption>
+                        <strong>Hook Load Direct Stress Contour Plot</strong>
+                        ANSYS stress distribution under 25-tonne hook payload showing maximum stress concentrated at column-jib attachment joints.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="Project Media/50m Tower Crane FEA/images/image28.png" alt="Directional Deformation Contour Plot">
+                    <figcaption>
+                        <strong>Directional Vertical Deformation Plot</strong>
+                        Jib tip vertical deflection reaching 0.31 m under full hook payload (~20% safety margin below 0.3867m limit).
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="Project Media/50m Tower Crane FEA/images/image18.png" alt="Lattice Tower Cross-Section Profile">
+                    <figcaption>
+                        <strong>Lattice Tower & Truss Cross-Sections</strong>
+                        Optimized structural steel profiles for main legs, square braces, and internal triangulated trusses.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons Footer -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px; flex-wrap: wrap; gap: 16px;">
+            <a href="projects.html#tower-crane-fea" class="btn-back">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Projects
+            </a>
+            <a href="3-shaft-gear-system.html" class="btn-project-report">
+                Next Project Report: 3-Shaft Gear Transmission System →
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:danishgalebotswe2026@u.northwestern.edu">Email: danishgalebotswe2026@u.northwestern.edu</a>
+            <a href="https://www.linkedin.com/in/danish-galebotswe/" target="_blank">LinkedIn Profile</a>
+            <a href="Danish Galebotswe Resume.pdf" target="_blank">Resume PDF</a>
+        </div>
+        <p>© 2026 Danish Galebotswe | Mechanical Engineering Portfolio</p>
+    </footer>
+
+</body>
+
+</html>

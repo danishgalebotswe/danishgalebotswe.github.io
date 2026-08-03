@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CNC Mouse Component Design & Haas VF-2 Manufacturing | Danish Galebotswe</title>
+    <meta name="description"
+        content="Technical manufacturing report for 3D CNC mouse component: Siemens NX CAM toolpaths, 6061-T6 aluminum milling, 0.001 inch scallop surface finishing, and Haas VF-2 execution by Danish Galebotswe.">
+    <link rel="stylesheet" href="style.css?v=4">
+</head>
+
+<body>
+
+    <header>
+        <h1>Danish Galebotswe</h1>
+        <p>Mechanical Engineering | Aerodynamics | CAD/CAM | Mechatronics | Machine Learning</p>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- Back to Projects Navigation Bar -->
+        <div class="back-link-bar">
+            <a href="projects.html#cnc-mouse-milling" class="btn-back">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Projects
+            </a>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="project-detail-hero">
+            <div class="project-meta-pills">
+                <span class="meta-pill">DSGN 345 Manufacturing Project</span>
+                <span class="meta-pill">Manufacturing & CAM Engineer</span>
+                <span class="meta-pill">Spring 2026</span>
+            </div>
+            <h1 style="margin-top: 14px;">CNC Mouse Component Design & Haas VF-2 Manufacturing</h1>
+            <p class="subtitle">
+                3D surface CAD modeling in Siemens NX, CAM toolpath optimization, feeds/speeds calculations, and 3-axis precision CNC machining on a Haas VF-2 mill.
+            </p>
+            <div class="tags" style="margin-bottom: 0;">
+                <span class="tag"
+                    style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">Siemens NX CAM</span>
+                <span class="tag"
+                    style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">Haas VF-2 3-Axis CNC</span>
+                <span class="tag"
+                    style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">6061-T6 Aluminum</span>
+                <span class="tag"
+                    style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">0.001" Scallop Surface Finish</span>
+            </div>
+        </div>
+
+        <!-- Report Download Bar -->
+        <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 12px; padding: 20px 24px; margin-bottom: 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; box-shadow: var(--shadow-sm);">
+            <div>
+                <h4 style="font-family: var(--font-heading); margin-bottom: 4px; color: var(--text-primary); font-size: 1.1rem;">Full Engineering Final Report & Documentation</h4>
+                <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Author: Danish Galebotswe (DSGN 345 CNC Manufacturing)</p>
+            </div>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="Project Media/CNC Mouse Component/Final Project Write Up.pdf" target="_blank" class="btn-project-report" style="background-color: #1e40af; border-color: #1e40af; color: #ffffff; display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Download PDF Report
+                </a>
+                <a href="Project Media/CNC Mouse Component/Final Project Write Up.docx" target="_blank" class="btn-project-report" style="background-color: #f1f5f9; border-color: #cbd5e1; color: #1e293b; display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Download Word Doc
+                </a>
+            </div>
+        </div>
+
+        <!-- Key Metrics Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="number">6061-T6 Al</div>
+                <div class="label">Stock Blank Material (4" × 4" × 2.6")</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">0.001"</div>
+                <div class="label">Scallop Height Precision Surface Finish</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">6,112 RPM</div>
+                <div class="label">Spindle Speed for 1/4" Ball End Mill</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">33.3%</div>
+                <div class="label">Stepover & Stepdown Tool Protection Limit</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">5 Hours</div>
+                <div class="label">Total Machine Setup & Cutting Time Window</div>
+            </div>
+        </div>
+
+        <!-- Section 1: Introduction & CAD Design -->
+        <div class="about-section">
+            <h2>Part Design & Geometric Modeling (Siemens NX)</h2>
+            <p>
+                The goal of this project was to design a 3D ergonomic computer mouse component specifically tailored for 3-axis CNC milling constraints on a <strong>Haas VF-2 CNC machine</strong>.
+            </p>
+            <p>
+                The model was created in Siemens NX incorporating revolved side thumb rests, blended top radii (R = 1.5" rear, R = 1.0" front), a 0.2" center slot pocket, corner mounting holes, and smooth organic surface transitions designed to test complex 3D surface milling toolpaths.
+            </p>
+
+            <div class="tech-table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Part Feature</th>
+                            <th>Required CAM Operation</th>
+                            <th>Tool & Parameter Target</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Bulk Material Removal</strong></td>
+                            <td>Cavity Mill Roughing</td>
+                            <td>3/4" Flat End Mill (Stepover 33.3%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pocket & Wall Finishing</strong></td>
+                            <td>Cavity Mill Finishing</td>
+                            <td>1/4" Flat End Mill (3D In-Process Workpiece)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ergonomic Curved Surface</strong></td>
+                            <td>Complex Area Surface Milling</td>
+                            <td>1/4" Ball End Mill (0.001" Scallop Stepover)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Center Slot & Features</strong></td>
+                            <td>Planar Milling / Slotting</td>
+                            <td>1/8" Flat End Mill</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Base Fixture Holes</strong></td>
+                            <td>Spot Drilling & Hole Making</td>
+                            <td>0.1" Center Drill + 1/4" Standard Drill</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 2: CAM Toolpath & Feeds/Speeds -->
+        <div class="about-section">
+            <h2>CAM Toolpath Programming & Feeds/Speeds</h2>
+            <p>
+                Machining toolpaths were configured in Siemens NX CAM using a Machining Coordinate System (MCS) set on the top left corner of the stock blank with a 0.5" clearance plane above the workpiece.
+            </p>
+
+            <div class="tech-table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Tool Description</th>
+                            <th>Tool Type</th>
+                            <th>Spindle Speed (RPM)</th>
+                            <th>Linear Feed Rate (IPM)</th>
+                            <th>Primary CAM Operation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>3/4" Flat End Mill</strong></td>
+                            <td>2-Flute Carbide Flat</td>
+                            <td>2,037 RPM</td>
+                            <td>18 IPM</td>
+                            <td>Cavity Mill Bulk Roughing</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1/4" Flat End Mill</strong></td>
+                            <td>2-Flute Carbide Flat</td>
+                            <td>6,112 RPM</td>
+                            <td>12 IPM</td>
+                            <td>Semi-Finish Pocketing</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1/4" Ball End Mill</strong></td>
+                            <td>2-Flute Ball Nose</td>
+                            <td>6,112 RPM</td>
+                            <td>12 IPM</td>
+                            <td>Complex Surface Area Milling</td>
+                        </tr>
+                        <tr>
+                            <td><strong>0.1" Center Drill</strong></td>
+                            <td>High-Speed Steel Spot</td>
+                            <td>900 RPM</td>
+                            <td>2 IPM</td>
+                            <td>Base Hole Spot Drilling</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1/4" Standard Drill</strong></td>
+                            <td>Twist Drill Bit</td>
+                            <td>900 RPM</td>
+                            <td>12 IPM</td>
+                            <td>Through Hole Making</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 3: CNC Machining Setup & Verification -->
+        <div class="about-section">
+            <h2>CNC Machine Setup & Execution (Haas VF-2)</h2>
+            <p>
+                The 6061-T6 aluminum blank was cut on a horizontal band saw and faced on a manual mill before loading into the Haas VF-2 vise with parallels.
+            </p>
+            <ul class="project-bullets">
+                <li><strong>WCS Edge Finder Zeroing:</strong> The X and Y work offsets were zeroed using a 0.2" diameter edge finder, compensating for the 0.1" tip radius.</li>
+                <li><strong>Tool Height Z Offsets:</strong> Each tool was loaded into the Haas tool carousel and zeroed against a precision 2" gauge block.</li>
+                <li><strong>Tool Clearance & Collision Prevention:</strong> Verified a minimum tool stickout of 1.5" to maintain 0.050" clearance between the tool holder and the workpiece.</li>
+                <li><strong>Surface Finish Result:</strong> The 1/4" ball end mill area milling routine produced a smooth, reflective surface finish with no visible scallop lines.</li>
+            </ul>
+        </div>
+
+        <!-- Section 4: Gallery -->
+        <div class="about-section">
+            <h2>CAD Toolpaths & CNC Machining Gallery</h2>
+            <div class="media-gallery-grid">
+                <figure class="figure-card contain-img">
+                    <img src="Project Media/CNC Mouse Component/images/image1.png" alt="Siemens NX CAD Model Overview">
+                    <figcaption>
+                        <strong>Siemens NX 3D CAD Model</strong>
+                        Ergonomic mouse geometry featuring blended top curves, side spheres, and base mounting holes.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="Project Media/CNC Mouse Component/images/image4.png" alt="Cavity Mill Roughing Toolpath">
+                    <figcaption>
+                        <strong>Cavity Mill Roughing Toolpath (3/4" End Mill)</strong>
+                        Siemens NX CAM toolpath for high-speed bulk material removal from the 6061-T6 aluminum blank.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="Project Media/CNC Mouse Component/images/image7.png" alt="Complex Surface Area Milling Toolpath">
+                    <figcaption>
+                        <strong>Area Milling Toolpath (1/4" Ball End Mill)</strong>
+                        Surface finishing toolpath generating 0.001" scallop height across organic curved surfaces.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="Project Media/CNC Mouse Component/images/image13.png" alt="Final Milled Aluminum Part">
+                    <figcaption>
+                        <strong>Final Haas VF-2 Machined Component</strong>
+                        Finished 6061-T6 aluminum mouse component demonstrating clean surface finish and crisp pocket details.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons Footer -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px; flex-wrap: wrap; gap: 16px;">
+            <a href="projects.html#cnc-mouse-milling" class="btn-back">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Projects
+            </a>
+            <a href="plastic-injection-molding.html" class="btn-project-report">
+                Next Project Report: Plastic Injection Molding Mold Tooling →
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:danishgalebotswe2026@u.northwestern.edu">Email: danishgalebotswe2026@u.northwestern.edu</a>
+            <a href="https://www.linkedin.com/in/danish-galebotswe/" target="_blank">LinkedIn Profile</a>
+            <a href="Danish Galebotswe Resume.pdf" target="_blank">Resume PDF</a>
+        </div>
+        <p>© 2026 Danish Galebotswe | Mechanical Engineering Portfolio</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FSAE Differential Mounts Topology Optimization & FEA | Danish Galebotswe</title>
+    <meta name="description"
+        content="Technical design report on Formula SAE electric vehicle differential mounts: topology optimization, 9987N FEA load case, 47.3% weight reduction, and Haas CNC machining by Danish Galebotswe & Siby Suriyan.">
+    <link rel="stylesheet" href="style.css?v=4">
+</head>
+
+<body>
+
+    <header>
+        <h1>Danish Galebotswe</h1>
+        <p>Mechanical Engineering | Aerodynamics | CAD/CAM | Mechatronics | Machine Learning</p>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- Back to Projects Navigation Bar -->
+        <div class="back-link-bar">
+            <a href="projects.html#diff-mounts-top" class="btn-back">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Projects
+            </a>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="project-detail-hero">
+            <div class="project-meta-pills">
+                <span class="meta-pill">Formula SAE Electric (NFR23)</span>
+                <span class="meta-pill">Drivetrain & FEA Engineer</span>
+                <span class="meta-pill">May 2023</span>
+            </div>
+            <h1 style="margin-top: 14px;">FSAE Differential Mounts Topology Optimization & FEA</h1>
+            <p class="subtitle">
+                Complete design, topology optimization, FEA stress analysis, chain tensioning kinematics, and Haas CNC manufacturing for the NFR23 electric race car drivetrain.
+            </p>
+            <div class="tags" style="margin-bottom: 0;">
+                <span class="tag"
+                    style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">47.3% Weight Reduction</span>
+                <span class="tag"
+                    style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">SolidWorks Topology Opt</span>
+                <span class="tag"
+                    style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">7075-T6 Aerospace Aluminum</span>
+                <span class="tag"
+                    style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">FSAE Rule F.11.2.2 Rear Protection</span>
+            </div>
+        </div>
+
+        <!-- Report Download Bar -->
+        <div style="background: #ffffff; border: 1px solid var(--border-color); border-radius: 12px; padding: 20px 24px; margin-bottom: 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; box-shadow: var(--shadow-sm);">
+            <div>
+                <h4 style="font-family: var(--font-heading); margin-bottom: 4px; color: var(--text-primary); font-size: 1.1rem;">Full Engineering Documentation & Report</h4>
+                <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Authors: Siby Suriyan & Danish Galebotswe (Northwestern Formula Racing NFR23 Drivetrain)</p>
+            </div>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="Project Media/Differential Mounts FEA/NFR23_Chassis_DifferentialMounts_Siby&Danish (2).pdf" target="_blank" class="btn-project-report" style="background-color: #1e40af; border-color: #1e40af; color: #ffffff; display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Download PDF Documentation
+                </a>
+                <a href="Project Media/Differential Mounts FEA/NFR23_Chassis_DifferentialMounts_Siby&Danish (2).docx" target="_blank" class="btn-project-report" style="background-color: #f1f5f9; border-color: #cbd5e1; color: #1e293b; display: inline-flex; align-items: center; gap: 8px; font-weight: 600;">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Download Word Doc
+                </a>
+            </div>
+        </div>
+
+        <!-- Key Metrics Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="number">47.3% Weight Cut</div>
+                <div class="label">Mass reduced from 2.45 lbs to 1.29 lbs</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">9,987 N</div>
+                <div class="label">Max Chain Tension Load Supported</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">7075-T6 Al</div>
+                <div class="label">High Strength Aerospace Aluminum (Yield &gt;430 MPa)</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">F.11.2.2 Compliant</div>
+                <div class="label">Integrated Rear Impact Protection Structure</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">160 mm Drexler</div>
+                <div class="label">Differential Housing & 24-Tooth Sprocket Integration</div>
+            </div>
+        </div>
+
+        <!-- Section 1: Overview & EV Transition Context -->
+        <div class="about-section">
+            <h2>Executive Summary & EV Powertrain Transition</h2>
+            <p>
+                When Northwestern Formula Racing transitioned from an internal combustion (IC) engine to an electric vehicle (EV) powertrain for NFR23, the differential mounting architecture required a complete redesign.
+            </p>
+            <p>
+                In NFR22, the 3-part mounting assembly attached directly to the IC engine block. For NFR23, with a compact electric motor, the mounts were redesigned into a 2-part assembly attached directly to the tubular chassis frame. This new configuration supports the 160 mm Drexler differential, withstands intense motor torque, enables rapid chain tensioning via turnbuckle rotation, and acts as compliant rear impact protection per FSAE regulations.
+            </p>
+        </div>
+
+        <!-- Section 2: Rule Compliance & Functional Design -->
+        <div class="about-section">
+            <h2>Rule Compliance & Functional Objectives</h2>
+            <ul class="project-bullets">
+                <li><strong>FSAE Rule F.11.2.2 (Rear Impact Protection):</strong> Differential mounts extend ≥ 25 mm past upper and lower rear impact tubes, satisfying mandatory structural equivalency requirements.</li>
+                <li><strong>FSAE Rule F.11.2.3 & F.11.2.4 (Accumulator Clearance):</strong> Ensures ≥ 25 mm clearance between non-crushable drivetrain items and the high-voltage accumulator container.</li>
+                <li><strong>Kinematic Chain Tensioning:</strong> Mounts pivot around fixed top tab frame hinges. Adjusting lower turnbuckles raises/lowers the differential position by &gt; 0.5 inches for rapid chain installation and tension tuning.</li>
+                <li><strong>Press-Fit Bearing Housing Sizing:</strong> Engineered press-fit bearing bore tolerances (Left: 89.9715 mm; Right: 79.9735 mm) housing SKF 6011-2Z and SKF 6010-2Z bearings.</li>
+            </ul>
+        </div>
+
+        <!-- Section 3: Topology Optimization & FEA Stress Analysis -->
+        <div class="about-section">
+            <h2>Topology Optimization & FEA Stress Results</h2>
+            <p>
+                Because the drive chain is positioned on the left side of the vehicle, the left differential mount experiences severe chain tension loads (<strong>9,987 N</strong> upward), while the right mount experiences <strong>-1,730 N</strong> downward load. SolidWorks Topology Optimization was run to strip non-critical material while preserving tab pin holes and bearing housings.
+            </p>
+
+            <div class="tech-table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Left Differential Mount (Drive Side)</th>
+                            <th>Right Differential Mount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Applied Bearing Load</strong></td>
+                            <td>9,987 N (Upward Chain Pull)</td>
+                            <td>-1,730 N (Downward Reaction)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fixture Condition</strong></td>
+                            <td>Fixed Hinge at Top Tab Hole</td>
+                            <td>Fixed Hinge at Top Tab Hole</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mesh Quality</strong></td>
+                            <td>Blended Curvature Solid Mesh (108,679 Nodes, 70,186 Elements)</td>
+                            <td>Blended Curvature Solid Mesh (96,160 Nodes, 62,414 Elements)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Material</strong></td>
+                            <td>7075-T6 Aluminum (Yield: 430–480 MPa)</td>
+                            <td>7075-T6 Aluminum (Yield: 430–480 MPa)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Factor of Safety</strong></td>
+                            <td><strong>FoS &gt; 1.5 (Pass)</strong></td>
+                            <td><strong>FoS &gt; 2.2 (Pass)</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Weight Savings</strong></td>
+                            <td>Combined Assembly: <strong>1.29 lbs</strong> (vs 2.45 lbs NFR22 baseline)</td>
+                            <td><strong>47.3% Total Mass Reduction</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 4: CAM Programming & CNC Manufacturing -->
+        <div class="about-section">
+            <h2>CAM Programming & Haas CNC Manufacturing</h2>
+            <p>
+                Both differential mounts were precision-machined in-house from a single 13" x 9" x 1.5" block of <strong>7075-T6 aluminum</strong> using a 3-axis Haas CNC Mill. CAM toolpaths were generated in Fusion 360.
+            </p>
+            <ul class="project-bullets">
+                <li><strong>Op 1 (Facing):</strong> 3-inch face mill to flat-surface the 7075-T6 aluminum stock blank.</li>
+                <li><strong>Op 2 (Adaptive & Contouring):</strong> 3/4" flat indexable end mill and 12mm flat end mill for 2D adaptive clearing of bearing pockets and pocket weight-reduction pockets.</li>
+                <li><strong>Drilling & Profiling:</strong> 1/8" center drill and 1/4" drill for chassis tab pin holes; 1/4" end mill 2D contouring to cut out outer mount profile.</li>
+                <li><strong>Manual Mill Slotting:</strong> Angled 30° and 45° angle blocks used on manual mill to machine turnbuckle attachment slots with a 5/8" end mill.</li>
+                <li><strong>Turnbuckle Machining:</strong> Turned from 2 ft low-carbon steel hex bar on lathe, drilled with 0.213" bit, and tapped with RH and LH 1/4-28 threads for dual-direction tensioning.</li>
+            </ul>
+        </div>
+
+        <!-- Section 5: Gallery -->
+        <div class="about-section">
+            <h2>Manufacturing & Vehicle Integration Gallery</h2>
+            <div class="media-gallery-grid">
+                <figure class="figure-card contain-img">
+                    <img src="Project Media/Differential Mounts FEA/images/image1.png" alt="Manufactured 7075-T6 Differential Mounts">
+                    <figcaption>
+                        <strong>Final Haas CNC Machined Differential Mounts</strong>
+                        In-house manufactured 7075-T6 aluminum differential mounts featuring topology-optimized pocket pocketing and press-fitted bearings.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="Project Media/Differential Mounts FEA/images/image18.jpg" alt="Differential Mounts Assembled on Chassis Frame">
+                    <figcaption>
+                        <strong>Chassis Frame & Turnbuckle Assembly</strong>
+                        Differential mounts mounted to top chassis tabs with bottom steel turnbuckles secured in place.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="Project Media/Differential Mounts FEA/images/image8.png" alt="Left Differential Mount FEA Stress Plot">
+                    <figcaption>
+                        <strong>Left Mount FEA Stress Plot (9,987 N Load)</strong>
+                        SolidWorks FEA stress contour under max chain tension showing stresses remaining safely within 7075-T6 yield strength.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="Project Media/Differential Mounts FEA/images/image17.png" alt="Drivetrain CAD Assembly Overview">
+                    <figcaption>
+                        <strong>NFR23 Drivetrain CAD Assembly</strong>
+                        SolidWorks CAD assembly showing Drexler differential, sprocket adapter, motor mount clearance, and chassis integration.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons Footer -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px; flex-wrap: wrap; gap: 16px;">
+            <a href="projects.html#diff-mounts-top" class="btn-back">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Projects
+            </a>
+            <a href="projects.html" class="btn-project-report">
+                View All Portfolio Projects →
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:danishgalebotswe2026@u.northwestern.edu">Email: danishgalebotswe2026@u.northwestern.edu</a>
+            <a href="https://www.linkedin.com/in/danish-galebotswe/" target="_blank">LinkedIn Profile</a>
+            <a href="Danish Galebotswe Resume.pdf" target="_blank">Resume PDF</a>
+        </div>
+        <p>© 2026 Danish Galebotswe | Mechanical Engineering Portfolio</p>
+    </footer>
+
+</body>
+
+</html>

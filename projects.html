@@ -291,100 +291,158 @@
 
         <div class="project" id="tower-crane-fea" data-category="cad">
             <div class="project-header">
-                <h3>50m Tower Crane Structural & Buckling Analysis</h3>
+                <h3><a href="50m-tower-crane.html">50m Tower Crane Structural & Buckling Analysis</a></h3>
                 <span class="project-date">April 2025 – June 2025</span>
             </div>
             <p><strong>Role:</strong> Structural Engineer | <em>Kellogg Crane Design Project</em></p>
             <ul class="project-bullets">
-                <li>Designed a 50 m tower crane structure to lift a 25-tonne load, strictly adhering to ASME B30.3 and
+                <li>Designed a 50 m tower crane structure to lift a 25-tonne load, strictly adhering to ASME B30.3, EN 14439, and
                     DIN 15018-1 standards.</li>
                 <li>Modeled column and boom structures in SolidWorks using optimized truss configurations for maximum
                     stiffness-to-weight ratio.</li>
                 <li>Simulated loading in ANSYS (hook load, 100 mph wind, -27°F to 105°F thermal loads), confirming peak
                     stresses stayed below 360 MPa yield limit for St 52-3 steel with ~20% safety margin.</li>
-                <li>Validated critical buckling stability analytically with buckling load capacity exceeding 52×10⁶ N.
+                <li>Validated critical buckling stability analytically with Euler buckling load capacity exceeding 52×10⁶ N.
                 </li>
             </ul>
             <div class="tags">
-                <span class="tag">SolidWorks CAD</span>
                 <span class="tag">ANSYS FEA</span>
-                <span class="tag">Structural Steel</span>
+                <span class="tag">SolidWorks CAD</span>
+                <span class="tag">ASME B30.3 & EN 14439</span>
+                <span class="tag">DIN 15018-1 Standard</span>
+                <span class="tag">Structural Steel St 52-3</span>
                 <span class="tag">Buckling Analysis</span>
-                <span class="tag">ASME Standards</span>
             </div>
-            <div class="project-media-frame">
-                <svg class="media-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
-                    </path>
-                </svg>
-                <div class="media-title">50m Tower Crane SolidWorks CAD & ANSYS von Mises Stress Contour</div>
-                <div class="media-desc">Project Media Target: Replace with crane FEA equivalent stress contour plot or
-                    assembly render.</div>
+
+            <!-- Extracted Media Showcase -->
+            <div class="card-media-showcase">
+                <div class="card-media-item">
+                    <img src="Project Media/50m Tower Crane FEA/images/image38.png" alt="50m Tower Crane CAD Overview">
+                    <div class="media-caption"><strong>Full Tower Assembly CAD</strong> — 40m lattice tower mast with 87m front jib & 29m counter-jib.</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/50m Tower Crane FEA/images/image16.png" alt="Hook Load Direct Stress Contour Plot">
+                    <div class="media-caption"><strong>Direct Stress Contour</strong> — ANSYS stress plot under 25-tonne hook load (Max: 257.9 MPa).</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/50m Tower Crane FEA/images/image28.png" alt="Vertical Deflection Plot">
+                    <div class="media-caption"><strong>Vertical Jib Deflection</strong> — Peak deflection 0.31 m under hook load (&lt; 0.3867m limit).</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/50m Tower Crane FEA/images/image18.png" alt="Lattice Tower Cross-Section Profiles">
+                    <div class="media-caption"><strong>Structural Cross-Sections</strong> — Main column, square brace & triangulated truss profiles.</div>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px;">
+                <a href="50m-tower-crane.html" class="btn-project-report">
+                    View Full Technical Report →
+                </a>
+                <a href="Project Media/50m Tower Crane FEA/ME362 Final Report.pdf" target="_blank" class="btn-project-report" style="background-color: #1e40af; border-color: #1e40af; color: #ffffff;">
+                    Download PDF Report 📄
+                </a>
             </div>
         </div>
 
         <div class="project" id="gear-transmission" data-category="cad">
             <div class="project-header">
-                <h3>Three-Shaft Gear Transmission System</h3>
+                <h3><a href="3-shaft-gear-system.html">Three-Shaft Gear Transmission System</a></h3>
                 <span class="project-date">September 2024 – December 2024</span>
             </div>
             <p><strong>Role:</strong> Design Engineer | <em>Theory of Machines Class Project</em></p>
             <ul class="project-bullets">
                 <li>Designed a 3-shaft gear transmission transmitting 60 kW power from 2700 rpm input to 400 rpm output
-                    (6.75:1 reduction ratio).</li>
-                <li>Modeled gears, shafts, bearings, and spacers in SolidWorks ensuring compact assembly layout.</li>
-                <li>Calculated bending moment, torque, and fatigue life for AISI 1020 steel in Excel, achieving Goodman
-                    safety factor 5.74 and yield safety factor 16.1.</li>
-                <li>Selected SKF 6309 deep groove ball bearings predicting >2350 million cycles operating life.</li>
+                    (actual: 399.94 rpm, ~6.75:1 reduction ratio).</li>
+                <li>Modeled gears, shafts, bearings, and spacers in SolidWorks ensuring compact assembly layout (total centerline distance AC = 405 mm).</li>
+                <li>Calculated bending moment, torque, and fatigue life for AISI 1020 steel, achieving Goodman
+                    fatigue safety factor 2.35 (Shaft 1) and minimum AGMA gear fatigue FoS 1.15.</li>
+                <li>Selected SKF 6309 and 6410 deep groove ball bearings predicting >2350 million cycles operating life (>5 years continuous service).</li>
             </ul>
             <div class="tags">
-                <span class="tag">SolidWorks</span>
+                <span class="tag">SolidWorks CAD</span>
                 <span class="tag">Machine Design</span>
-                <span class="tag">Gear Kinematics</span>
-                <span class="tag">Excel Analysis</span>
-                <span class="tag">SKF Bearings</span>
+                <span class="tag">AGMA Gear Kinematics</span>
+                <span class="tag">Goodman Fatigue</span>
+                <span class="tag">SKF Ball Bearings</span>
             </div>
-            <div class="project-media-frame">
-                <svg class="media-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
-                    </path>
-                </svg>
-                <div class="media-title">Three-Shaft Gearbox 3D Assembly & Exploded View</div>
-                <div class="media-desc">Project Media Target: Replace with SolidWorks gearbox 3D CAD assembly or
-                    exploded rendering.</div>
+
+            <!-- Extracted Media Showcase -->
+            <div class="card-media-showcase">
+                <div class="card-media-item">
+                    <img src="Project Media/3-Shaft Gear System/images/image12.png" alt="3D Gearbox Exploded View CAD Model">
+                    <div class="media-caption"><strong>3D Assembly Exploded View</strong> — SolidWorks model of gears, shafts, SKF bearings & spacers.</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/3-Shaft Gear System/images/image6.png" alt="Shaft 1 Mechanical Drawing">
+                    <div class="media-caption"><strong>Shaft 1 Engineering Drawing</strong> — Detailed drawing for Shaft 1 (Danish Galebotswe).</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/3-Shaft Gear System/images/image7.png" alt="Gear Transmission Force Diagram">
+                    <div class="media-caption"><strong>Gear Kinematics & Forces</strong> — Tangential and radial force analysis across double-reduction spur pairs.</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/3-Shaft Gear System/images/image21.png" alt="Full Gearbox Assembly Layout">
+                    <div class="media-caption"><strong>Compact Transmission Layout</strong> — Assembly CAD with 405 mm total centerline distance.</div>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px;">
+                <a href="3-shaft-gear-system.html" class="btn-project-report">
+                    View Full Technical Report →
+                </a>
+                <a href="Project Media/3-Shaft Gear System/ME 315 Design Project - Galebotswe - McGinnis - Lechuga.pdf" target="_blank" class="btn-project-report" style="background-color: #1e40af; border-color: #1e40af; color: #ffffff;">
+                    Download PDF Report 📄
+                </a>
             </div>
         </div>
 
         <div class="project" id="diff-mounts-top" data-category="cad">
             <div class="project-header">
-                <h3>FSAE Differential Mounts Topology Optimization</h3>
+                <h3><a href="differential-mounts-fea.html">FSAE Differential Mounts Topology Optimization</a></h3>
                 <span class="project-date">September 2022 – June 2023</span>
             </div>
-            <p><strong>Role:</strong> Design Engineer | <em>Northwestern Formula Racing SAE</em></p>
+            <p><strong>Role:</strong> Drivetrain & FEA Engineer | <em>Northwestern Formula Racing SAE (NFR23)</em></p>
             <ul class="project-bullets">
-                <li>Designed new differential mounting brackets in SolidWorks for electric vehicle powertrain
-                    transition.</li>
-                <li>Improved stiffness-to-weight ratio by 10% using SolidWorks Topology Optimization.</li>
-                <li>Executed Finite Element Analysis (FEA) securing structural factor of safety > 1.5 under full motor
-                    torque loads.</li>
+                <li>Designed new 7075-T6 aluminum differential mounting brackets for Formula SAE electric vehicle powertrain transition.</li>
+                <li>Achieved 47.3% total weight reduction (2.45 lbs down to 1.29 lbs) using SolidWorks Topology Optimization.</li>
+                <li>Executed Finite Element Analysis (FEA) under 9,987 N peak chain tension load, securing structural factor of safety > 1.5.</li>
+                <li>Programmed CAM in Fusion 360 and machined components in-house using a 3-axis Haas CNC mill.</li>
             </ul>
             <div class="tags">
-                <span class="tag">SolidWorks FEA</span>
-                <span class="tag">Topology Optimization</span>
-                <span class="tag">EV Powertrain</span>
-                <span class="tag">Stress Analysis</span>
+                <span class="tag">SolidWorks Topology Opt</span>
+                <span class="tag">ANSYS / SolidWorks FEA</span>
+                <span class="tag">7075-T6 Aluminum</span>
+                <span class="tag">Haas CNC Milling</span>
+                <span class="tag">FSAE Rule F.11.2.2</span>
             </div>
-            <div class="project-media-frame">
-                <svg class="media-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
-                    </path>
-                </svg>
-                <div class="media-title">Differential Bracket Topology Optimization & Stress Plots</div>
-                <div class="media-desc">Project Media Target: Replace with topology optimized CAD render or FEA stress
-                    contour.</div>
+
+            <!-- Extracted Media Showcase -->
+            <div class="card-media-showcase">
+                <div class="card-media-item">
+                    <img src="Project Media/Differential Mounts FEA/images/image1.png" alt="Manufactured 7075-T6 Differential Mounts">
+                    <div class="media-caption"><strong>Haas CNC Milled Mounts</strong> — In-house machined 7075-T6 aluminum mounts with press-fitted bearings.</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/Differential Mounts FEA/images/image18.jpg" alt="Differential Mounts Assembled on Chassis Frame">
+                    <div class="media-caption"><strong>Chassis Integration</strong> — Mounts and steel turnbuckles installed in top chassis frame tabs.</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/Differential Mounts FEA/images/image8.png" alt="Left Differential Mount FEA Stress Plot">
+                    <div class="media-caption"><strong>FEA Stress Contour</strong> — Stress distribution under 9,987 N chain tension (FoS &gt; 1.5).</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/Differential Mounts FEA/images/image17.png" alt="Drivetrain CAD Assembly Overview">
+                    <div class="media-caption"><strong>Drivetrain CAD Assembly</strong> — 160mm Drexler diff, sprocket adapter & chain tensioning layout.</div>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px;">
+                <a href="differential-mounts-fea.html" class="btn-project-report">
+                    View Full Technical Report →
+                </a>
+                <a href="Project Media/Differential Mounts FEA/NFR23_Chassis_DifferentialMounts_Siby&Danish (2).pdf" target="_blank" class="btn-project-report" style="background-color: #1e40af; border-color: #1e40af; color: #ffffff;">
+                    Download PDF Report 📄
+                </a>
             </div>
         </div>
 
@@ -393,100 +451,151 @@
 
         <div class="project" id="cnc-mouse-milling" data-category="mfg">
             <div class="project-header">
-                <h3>CNC Mouse Component Design & Haas VF-2 Manufacturing</h3>
+                <h3><a href="cnc-mouse-milling.html">CNC Mouse Component Design & Haas VF-2 Manufacturing</a></h3>
                 <span class="project-date">March 2026 – June 2026</span>
             </div>
-            <p><strong>Role:</strong> Manufacturing Engineer | <em>CNC Process Development</em></p>
+            <p><strong>Role:</strong> Manufacturing Engineer | <em>DSGN 345 Process Development</em></p>
             <ul class="project-bullets">
-                <li>Designed a 3D computer mouse-inspired component in Siemens NX with complex revolved and blended
-                    surfaces optimized for 3-axis CNC milling.</li>
-                <li>Configured a full CAM setup in Siemens NX CAM for a 4" x 4" x 2.6" 6061-T6 aluminum block,
-                    generating toolpaths (Cavity Mill, Area Mill, Planar Mill).</li>
-                <li>Calculated feeds, speeds, and step-over parameters (33.3% step-over), executing finishing routines
-                    with a 1/4" ball end mill to achieve 0.001" scallop height.</li>
-                <li>Machined the part on a Haas VF-2 CNC mill using edge finder, 2" gauge block setup, and
-                    zero-collision clearances within a 5-hour window.</li>
+                <li>Designed a 3D computer mouse component in Siemens NX featuring organic revolved surfaces and pocket features optimized for 3-axis CNC milling.</li>
+                <li>Configured CAM setup in Siemens NX CAM for 6061-T6 aluminum (4" x 4" x 2.6"), generating toolpaths for Cavity Mill Roughing, Cavity Mill Finishing, and Complex Area Surface Milling.</li>
+                <li>Calculated feeds, speeds (6,112 RPM for 1/4" ball end mill), and step-over parameters (33.3%), achieving a 0.001" scallop height surface finish.</li>
+                <li>Machined the part on a Haas VF-2 3-axis CNC mill using edge finder WCS zeroing, 2" gauge block tool length offsets, and zero-collision clearances within a 5-hour window.</li>
             </ul>
             <div class="tags">
                 <span class="tag">Siemens NX CAM</span>
-                <span class="tag">Haas VF-2 CNC</span>
+                <span class="tag">Haas VF-2 3-Axis CNC</span>
                 <span class="tag">6061-T6 Aluminum</span>
-                <span class="tag">Surface Milling</span>
-                <span class="tag">G-Code</span>
+                <span class="tag">0.001" Scallop Surface Finish</span>
+                <span class="tag">Feeds & Speeds Optimization</span>
             </div>
-            <div class="project-media-frame">
-                <svg class="media-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
-                    </path>
-                </svg>
-                <div class="media-title">Siemens NX CAM Toolpath & Haas VF-2 Milled Aluminum Component</div>
-                <div class="media-desc">Project Media Target: Replace with photo of final CNC milled aluminum component
-                    or NX CAM toolpath visual.</div>
+
+            <!-- Extracted Media Showcase -->
+            <div class="card-media-showcase">
+                <div class="card-media-item">
+                    <img src="Project Media/CNC Mouse Component/images/image1.png" alt="Siemens NX CAD Model Overview">
+                    <div class="media-caption"><strong>Siemens NX 3D CAD</strong> — Ergonomic mouse model with side thumb rests & mounting holes.</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/CNC Mouse Component/images/image4.png" alt="Cavity Mill Roughing Toolpath">
+                    <div class="media-caption"><strong>Cavity Mill Roughing</strong> — Bulk material clearing toolpath using 3/4" flat end mill.</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/CNC Mouse Component/images/image7.png" alt="Complex Area Surface Milling Toolpath">
+                    <div class="media-caption"><strong>Complex Area Surface Milling</strong> — 0.001" scallop height surface finishing with 1/4" ball end mill.</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/CNC Mouse Component/images/image13.png" alt="Final Milled Aluminum Part">
+                    <div class="media-caption"><strong>Final Haas VF-2 Machined Part</strong> — Clean finished 6061-T6 aluminum component.</div>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px;">
+                <a href="cnc-mouse-milling.html" class="btn-project-report">
+                    View Full Technical Report →
+                </a>
+                <a href="Project Media/CNC Mouse Component/Final Project Write Up.pdf" target="_blank" class="btn-project-report" style="background-color: #1e40af; border-color: #1e40af; color: #ffffff;">
+                    Download PDF Report 📄
+                </a>
             </div>
         </div>
 
         <div class="project" id="pixel7-dfam-case" data-category="mfg">
             <div class="project-header">
-                <h3>Google Pixel 7 Case & Fan Accessory (DfAM)</h3>
+                <h3><a href="pixel7-dfam-case.html">Google Pixel 7 Custom Multi-Material Phone Case (DfAM)</a></h3>
                 <span class="project-date">May 2026 – June 2026</span>
             </div>
-            <p><strong>Role:</strong> Design Engineer | <em>Product Design & DfAM</em></p>
+            <p><strong>Role:</strong> DfAM & Product Engineer | <em>DSGN 348 Rapid Prototyping</em></p>
             <ul class="project-bullets">
-                <li>Reverse-engineered Google Pixel 7 dimensions using precision calipers and modeled complex snap-fit
-                    geometry and axial fan mounts in SolidWorks.</li>
-                <li>Applied Design for Additive Manufacturing (DfAM) principles to integrate custom embossed graphics
-                    exceeding conventional injection molding capabilities.</li>
-                <li>Fabricated prototypes using FDM (Prusa MK4/MK4S) and SLA (Formlabs Form 4/4B) in Flexible TPU, Tough
-                    1500, and Tough 2000 resins.</li>
-                <li>Directed structured user testing with 5 participants to optimize button actuation travel and
-                    ergonomic hand placement.</li>
+                <li>Reverse-engineered Google Pixel 7 dimensions (155.6 x 73.2 x 8.7 mm) using precision calipers and constructed surface geometry in SolidWorks.</li>
+                <li>Applied Design for Additive Manufacturing (DfAM) principles to integrate custom embossed Botswana graphics and a snap-on fidget axial fan accessory.</li>
+                <li>Manufactured 3 prototyping iterations using FDM (Prusa MK4 flexible TPU) and SLA (Formlabs Form 4/4B in Tough 1500 and Tough 2000 resins).</li>
+                <li>Conducted structured ergonomic user testing with 5 participants to optimize power button travel and fan clearance.</li>
             </ul>
             <div class="tags">
                 <span class="tag">SolidWorks Surface Modeling</span>
+                <span class="tag">Formlabs Form 4 SLA</span>
+                <span class="tag">Tough 1500 & Tough 2000 Resins</span>
                 <span class="tag">DfAM</span>
-                <span class="tag">3D Printing (FDM / SLA)</span>
-                <span class="tag">Formlabs Resins</span>
-                <span class="tag">User Testing</span>
+                <span class="tag">User Ergonomics Study</span>
             </div>
-            <div class="project-media-frame">
-                <svg class="media-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                </svg>
-                <div class="media-title">3D Printed Phone Case & Snap-Fit Fan Assembly (TPU & Formlabs Resin)</div>
-                <div class="media-desc">Project Media Target: Replace with photo of 3D printed prototype mounted on
-                    Google Pixel 7.</div>
+
+            <!-- Extracted Media Showcase -->
+            <div class="card-media-showcase">
+                <div class="card-media-item">
+                    <img src="Project Media/Google Pixel 7 Case/images/image6.png" alt="Final Manufactured Pixel 7 Case and Fan">
+                    <div class="media-caption"><strong>Model 3 Final Case & Fan</strong> — Formlabs SLA printed case with snap-fitted fidget axial fan.</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/Google Pixel 7 Case/images/image4.png" alt="Model 1 FDM TPU Print">
+                    <div class="media-caption"><strong>Model 1 FDM TPU Prototype</strong> — Prusa MK4 flex test validating camera cutout dimensions.</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/Google Pixel 7 Case/images/image5.png" alt="Model 2 SLA Tough 1500 Study">
+                    <div class="media-caption"><strong>Model 2 Ergonomic Study</strong> — Tough 1500 SLA test cases evaluated during 5-user feedback study.</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/Google Pixel 7 Case/images/image1.jpg" alt="Google Pixel 7 Reference Dimensions">
+                    <div class="media-caption"><strong>Pixel 7 Reference Geometry</strong> — Reverse-engineered camera bar & button specs.</div>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px;">
+                <a href="pixel7-dfam-case.html" class="btn-project-report">
+                    View Full Technical Report →
+                </a>
+                <a href="Project Media/Google Pixel 7 Case/Final Report.pdf" target="_blank" class="btn-project-report" style="background-color: #1e40af; border-color: #1e40af; color: #ffffff;">
+                    Download PDF Report 📄
+                </a>
             </div>
         </div>
 
         <div class="project" id="injection-molding-mold" data-category="mfg">
             <div class="project-header">
-                <h3>Plastic Injection Molding Aluminum Mold Tooling</h3>
-                <span class="project-date">April 2025 – June 2025</span>
+                <h3><a href="plastic-injection-molding.html">Plastic Injection Molding Aluminum Mold Tooling</a></h3>
+                <span class="project-date">Winter 2025</span>
             </div>
-            <p><strong>Role:</strong> Manufacturing Engineer | <em>Manufacturing Class Project</em></p>
+            <p><strong>Role:</strong> Mold Tooling & Manufacturing Engineer | <em>ME 340-2 Injection Molding Project</em></p>
             <ul class="project-bullets">
-                <li>Designed a custom aluminum mold for a toy part in Siemens NX adhering to injection molding draft and
-                    shrinkage guidelines.</li>
-                <li>Generated G-code in Siemens NX CAM for CNC milling on Haas Mini Mill 2 machines.</li>
-                <li>Produced fully dimensioned 2D engineering drawings with complete GD&T annotations.</li>
+                <li>Designed 4 aluminum mold halves (Core & Cavity pairs) in Siemens NX for a modular polypropylene Among Us character with interchangeable accessories.</li>
+                <li>Adhered strictly to DfIM rules: 0.075" uniform wall thickness, 2.0° draft angles, 0.0035" interference press-fit calculation (60% yield stress limit).</li>
+                <li>Programmed CAM toolpaths in Siemens NX and machined mold plates on a 3-axis Haas Mini Mill 2; reamed dowel holes to 0.125" for precision press-fit pins.</li>
+                <li>Optimized injection parameters (487°F/2750 psi for Front/Mustache; 500°F/3750 psi for Back/Hat) to eliminate short shots and flash.</li>
             </ul>
             <div class="tags">
-                <span class="tag">Siemens NX</span>
-                <span class="tag">Injection Molding</span>
-                <span class="tag">Haas Mini Mill</span>
-                <span class="tag">GD&T Drawings</span>
+                <span class="tag">Aluminum Core/Cavity Tooling</span>
+                <span class="tag">Polypropylene Injection Molding</span>
+                <span class="tag">Haas Mini Mill 2</span>
+                <span class="tag">Siemens NX CAM</span>
+                <span class="tag">Press-Fit Metrology</span>
             </div>
-            <div class="project-media-frame">
-                <svg class="media-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
-                    </path>
-                </svg>
-                <div class="media-title">Aluminum Mold Tooling Core/Cavity CAD & Molded Plastic Part</div>
-                <div class="media-desc">Project Media Target: Replace with CAD core/cavity render or molded plastic part
-                    photo.</div>
+
+            <!-- Extracted Media Showcase -->
+            <div class="card-media-showcase">
+                <div class="card-media-item">
+                    <img src="Project Media/Plastic Injection Molding/images/image8.png" alt="Assembled Polypropylene Among Us Character">
+                    <div class="media-caption"><strong>Molded Polypropylene Parts</strong> — Fully assembled character with mustache & top hat accessories.</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/Plastic Injection Molding/images/image5.png" alt="Aluminum Mold Core & Cavity Render">
+                    <div class="media-caption"><strong>Core & Cavity Mold Plates</strong> — CNC machined aluminum molds showing runners & ejector pins.</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/Plastic Injection Molding/images/image7.png" alt="Runner Flow Map Simulation">
+                    <div class="media-caption"><strong>Runner & Flow Mapping</strong> — Balanced runner system & cold slug wells for uniform filling.</div>
+                </div>
+                <div class="card-media-item">
+                    <img src="Project Media/Plastic Injection Molding/images/image4.png" alt="CAD Highlight of Mold Design Features">
+                    <div class="media-caption"><strong>DfIM Features CAD</strong> — 2° draft angles, 0.075" uniform wall thickness & half-pin joints.</div>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px;">
+                <a href="plastic-injection-molding.html" class="btn-project-report">
+                    View Full Technical Report →
+                </a>
+                <a href="Project Media/Plastic Injection Molding/Team 10 Final Report_ ME340-2 (1).pdf" target="_blank" class="btn-project-report" style="background-color: #1e40af; border-color: #1e40af; color: #ffffff;">
+                    Download PDF Report 📄
+                </a>
             </div>
         </div>
 
