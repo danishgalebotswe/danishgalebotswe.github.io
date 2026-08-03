@@ -125,6 +125,7 @@
                 <button class="filter-btn active" data-category="all">All Domains</button>
                 <button class="filter-btn" data-category="aero">Aerodynamics & CFD</button>
                 <button class="filter-btn" data-category="cad">CAD & Manufacturing</button>
+                <button class="filter-btn" data-category="mechatronics">Mechatronics & Control</button>
                 <button class="filter-btn" data-category="ml">Machine Learning</button>
             </div>
         </div>
@@ -173,7 +174,7 @@
         <!-- Project 2: Plastic Injection Molding Aluminum Tooling -->
         <div class="project" data-category="cad">
             <div class="project-header">
-                <h3>Plastic Injection Molding Aluminum Mold Tooling</h3>
+                <h3><a href="plastic-injection-molding.html">Plastic Injection Molding Aluminum Mold Tooling</a></h3>
                 <span class="project-date">Manufacturing & CAM</span>
             </div>
             <p>
@@ -197,12 +198,39 @@
                 <div class="media-title">Aluminum Mold Tooling Core/Cavity CAD & Molded Plastic Part</div>
                 <div class="media-desc">Project Media Target: Replace with CAD core/cavity render or molded plastic part photo.</div>
             </div>
-            <a href="projects.html#injection-molding-mold"
-                style="color: #1e40af; font-weight: 600; text-decoration: none;">View full project technical details
-                →</a>
+            <a href="plastic-injection-molding.html" style="color: #1e40af; font-weight: 600; text-decoration: none;">View full project technical details →</a>
         </div>
 
-        <!-- Project 3: PyTorch Tire Model -->
+        <!-- Project 3: Captive Water Window Thermal Cooling System -->
+        <div class="project" data-category="mechatronics">
+            <div class="project-header">
+                <h3><a href="projects.html#captive-water-window">Captive Water Window Thermal Cooling System</a></h3>
+                <span class="project-date">Capstone Design Project</span>
+            </div>
+            <p>
+                Researched and modeled water-filled window thermal management for energy-efficient residential building cooling using aquifer water sources. Conducted free/forced convection heat transfer analysis in MATLAB and engineered a DAQ data logging system utilizing Raspberry Pi Pico 2, MAX6675 Type K thermocouples, and Hall Effect flow sensors.
+            </p>
+            <div class="tags">
+                <span class="tag">Heat Transfer</span>
+                <span class="tag">MATLAB Modeling</span>
+                <span class="tag">Raspberry Pi Pico 2</span>
+                <span class="tag">Thermocouple DAQ</span>
+                <span class="tag">P&ID System Design</span>
+            </div>
+
+            <div class="project-media-frame">
+                <svg class="media-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                    </path>
+                </svg>
+                <div class="media-title">Captive Water Window P&ID Diagram & Thermal Transfer Model</div>
+                <div class="media-desc">P&ID schematic, MATLAB heat exchanger model & Pico 2 thermocouple DAQ logger.</div>
+            </div>
+            <a href="projects.html#captive-water-window" style="color: #1e40af; font-weight: 600; text-decoration: none;">View full project technical details →</a>
+        </div>
+
+        <!-- Project 4: PyTorch Tire Model -->
         <div class="project" data-category="ml">
             <div class="project-header">
                 <h3>FSAE Tire Force Prediction via PyTorch Neural Networks</h3>
