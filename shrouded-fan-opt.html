@@ -81,7 +81,14 @@
                 Our client, Nick Raffel, designed a custom architectural ventilation installation aiming to maximize passive airflow circulation within the GRAY Chicago art gallery. Standard commercial ceiling fans lacked optimization for high-efficiency volumetric discharge within a cylindrical shroud enclosure.
             </p>
             <p>
-                The objective was to formulate and solve a rigorous aerodynamic optimization problem maximizing volumetric flow rate (\(Q\)) while keeping fan acoustic noise and rotational motor torque constrained.
+        <!-- Project Objective & Client Scope -->
+        <div class="about-section">
+            <h2>Project Objective & Art Gallery Context</h2>
+            <p>
+                Our client, Nick Raffel, designed a custom architectural ventilation installation aiming to maximize passive airflow circulation within the GRAY Chicago art gallery. Standard commercial ceiling fans lacked optimization for high-efficiency volumetric discharge within a cylindrical shroud enclosure.
+            </p>
+            <p>
+                The objective was to formulate and solve a rigorous aerodynamic optimization problem maximizing volumetric flow rate (Q) while keeping fan acoustic noise and rotational motor torque constrained.
             </p>
 
             <div class="media-gallery-grid" style="margin-top: 24px;">
@@ -106,21 +113,19 @@
         <div class="about-section">
             <h2>10-Dimensional Design Parameterization & Math Formulation</h2>
             <p>
-                To allow wide variation in blade twist, taper, and cross-sectional camber while ensuring smooth manufacturable surfaces, the fan geometry was parameterized into a 10-dimensional design vector \(\mathbf{x} \in \mathbb{R}^{10}\):
+                To allow wide variation in blade twist, taper, and cross-sectional camber while ensuring smooth manufacturable surfaces, the fan geometry was parameterized into a 10-dimensional design vector <b>x</b> ∈ ℝ<sup>10</sup>:
             </p>
 
             <div class="math-box">
-                \(\mathbf{x} = [ f_{\text{camber}}, x_f, t_{\text{thick}}, c_{\text{root}}, c_{\text{tip}}, \theta_{\text{twist}}, r_{\text{hub}}, N_{\text{blades}}, \text{Sweep}, \text{Shroud Gap} ]\)
+                <b>x</b> = [ f<sub>camber</sub>, x<sub>f</sub>, t<sub>thick</sub>, c<sub>root</sub>, c<sub>tip</sub>, θ<sub>twist</sub>, r<sub>hub</sub>, N<sub>blades</sub>, Sweep, Shroud Gap ]
             </div>
 
             <p>
                 Mean camber line coordinates for generalized NACA 4-digit airfoil profiles were calculated via parabolic equations:
             </p>
             <div class="math-box">
-                y_c = \begin{cases} 
-                \frac{f}{x_f^2} (2 x_f x - x^2), & 0 \le x \le x_f \\
-                \frac{f}{(1-x_f)^2} \left[ (1 - 2 x_f) + 2 x_f x - x^2 \right], & x_f \le x \le 1 
-                \end{cases}
+                y<sub>c</sub> = (f / x<sub>f</sub><sup>2</sup>) · (2 x<sub>f</sub> x - x<sup>2</sup>) &nbsp;&nbsp; for &nbsp; 0 ≤ x ≤ x<sub>f</sub><br>
+                y<sub>c</sub> = (f / (1 - x<sub>f</sub>)<sup>2</sup>) · [(1 - 2 x<sub>f</sub>) + 2 x<sub>f</sub> x - x<sup>2</sup>] &nbsp;&nbsp; for &nbsp; x<sub>f</sub> ≤ x ≤ 1
             </div>
 
             <div class="media-gallery-grid" style="margin-top: 24px;">
@@ -128,7 +133,7 @@
                     <img src="images/shrouded-fan/airfoil-design-parameters.png" alt="NACA Airfoil Parameters Diagram">
                     <figcaption>
                         <strong>Figure 3: Airfoil Parameterization Schematic</strong>
-                        Diagram depicting camber height \(f\), location of max camber \(x_f\), and thickness distribution \(t\).
+                        Diagram depicting camber height f, location of max camber x<sub>f</sub>, and thickness distribution t.
                     </figcaption>
                 </figure>
                 <figure class="figure-card contain-img">
@@ -142,7 +147,7 @@
                     <img src="images/shrouded-fan/naca-airfoil-generation.png" alt="Automated NACA Airfoil Generation Coordinate Plot">
                     <figcaption>
                         <strong>Figure 5: NACA Airfoil Profile Generation</strong>
-                        Generated upper (\(x_U, y_U\)) and lower (\(x_L, y_L\)) surface coordinate points for automated CAD lofting.
+                        Generated upper (x<sub>U</sub>, y<sub>U</sub>) and lower (x<sub>L</sub>, y<sub>L</sub>) surface coordinate points for automated CAD lofting.
                     </figcaption>
                 </figure>
             </div>
@@ -158,13 +163,13 @@
                 <li><strong>Latin Hypercube Sampling (LHS):</strong> Sampled initial space using <code>scipy.stats.qmc.LatinHypercube</code> to guarantee space-filling uniform coverage across all 10 bounds.</li>
                 <li><strong>Gaussian Process (GP) Regression:</strong> Constructed a GP surrogate model with a Matérn 5/2 covariance kernel:
                     <div class="math-box" style="margin: 12px 0;">
-                        k(x, x') = \sigma^2 \left(1 + \frac{\sqrt{5}d}{l} + \frac{5d^2}{3l^2}\right) \exp\left(-\frac{\sqrt{5}d}{l}\right)
+                        k(x, x') = σ² · (1 + √5·d / l + 5d² / 3l²) · exp(-√5·d / l)
                     </div>
                 </li>
-                <li><strong>Hyperparameter Tuning:</strong> Optimized length scales \(l\) using Differential Evolution to minimize negative log marginal likelihood.</li>
+                <li><strong>Hyperparameter Tuning:</strong> Optimized length scales l using Differential Evolution to minimize negative log marginal likelihood.</li>
                 <li><strong>Bayesian Acquisition Function:</strong> Selected sequential evaluation points by maximizing Expected Improvement (EI):
                     <div class="math-box" style="margin: 12px 0;">
-                        \text{EI}(x) = (\mu(x) - f(x^+) - \xi)\Phi(Z) + \sigma(x)\phi(Z)
+                        EI(x) = (μ(x) - f(x⁺) - ξ) Φ(Z) + σ(x) φ(Z)
                     </div>
                 </li>
             </ul>
@@ -188,7 +193,7 @@
                     <img src="images/shrouded-fan/bayesian-opt-convergence.png" alt="Bayesian Optimization Expected Improvement Convergence Curve">
                     <figcaption>
                         <strong>Figure 8: Optimization Convergence History</strong>
-                        Iteration convergence plot showing volumetric airflow progression reaching peak \(\approx 21.6 \text{ m}^3/\text{s}\).
+                        Iteration convergence plot showing volumetric airflow progression reaching peak ≈ 21.6 m³/s.
                     </figcaption>
                 </figure>
             </div>
@@ -198,7 +203,7 @@
         <div class="about-section">
             <h2>3D ANSYS Fluent CFD Validation</h2>
             <p>
-                The optimal design candidate selected by Bayesian Optimization was subjected to full-mesh validation in ANSYS Fluent using the \(k\text{-}\omega \text{ SST}\) turbulence model. 
+                The optimal design candidate selected by Bayesian Optimization was subjected to full-mesh validation in ANSYS Fluent using the k-ω SST turbulence model. 
             </p>
             <p>
                 <strong>Results:</strong> Physical CFD verification confirmed a maximum discharge flow rate of <strong>21.64 m³/s</strong>, matching the Gaussian Process surrogate prediction within 1.8% error margin.
