@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rear Wing Redesign & Tire Wake Management | Danish Galebotswe</title>
+    <meta name="description" content="In-depth technical report on the FSAE Rear Wing Redesign, 3D Siemens Star CCM+ CFD mesh validation, OptimumLap track simulation, FMEA, and carbon fiber composite tooling by Danish Galebotswe.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Danish Galebotswe</h1>
+        <p>Mechanical Engineering | Aerodynamics | CAD/CAM | Mechatronics | Machine Learning</p>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html" class="active">Experience</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- Back Navigation Bar -->
+        <div class="back-link-bar">
+            <a href="experience.html#exp-fsae-aero-eng" class="btn-back">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Back to Experience
+            </a>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="project-detail-hero">
+            <div class="project-meta-pills">
+                <span class="meta-pill">Formula SAE Aero</span>
+                <span class="meta-pill">Rear Wing Design Engineer</span>
+                <span class="meta-pill">June 2023 – June 2024</span>
+            </div>
+            <h1 style="margin-top: 14px;">FSAE Rear Wing Redesign & Tire Wake Management</h1>
+            <p class="subtitle">
+                Airfoil selection, 3D Siemens Star CCM+ CFD mesh validation, OptimumLap track lap time optimization, structural mechanics calculation, FMEA risk mitigation, and composite manufacturing.
+            </p>
+            <div class="tags" style="margin-bottom: 0;">
+                <span class="tag" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">Siemens Star CCM+</span>
+                <span class="tag" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">UIUC Airfoil Database</span>
+                <span class="tag" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">OptimumLap Track Sim</span>
+                <span class="tag" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">Swan Neck Carbon Mounts</span>
+            </div>
+        </div>
+
+        <!-- Key Metrics Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="number">>10%</div>
+                <div class="label">Drag Reduction vs NFR23 Baseline</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">2.5 → High L/D</div>
+                <div class="label">Lift-to-Drag Ratio Optimization</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">4 Elements</div>
+                <div class="label">Multi-Airfoil High Downforce System</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">0.42s / lap</div>
+                <div class="label">Autocross Lap Time Improvement</div>
+            </div>
+        </div>
+
+        <!-- Project Overview & Regulation Compliance -->
+        <div class="about-section">
+            <h2>Project Overview & 2024 FSAE Regulation Compliance</h2>
+            <p>
+                The primary objective of the NFR24 Rear Wing Redesign was to significantly increase aerodynamic efficiency (\(L/D\) ratio) beyond the 2.5 baseline set by NFR23 while maintaining strict compliance with updated Formula SAE 2024 structural and geometric rules:
+            </p>
+            <ul class="project-bullets">
+                <li><strong>Rule EV4.8 (Geometric Boundaries):</strong> Rear wing height constrained within 1.2 m above the ground; forward setback within 250 mm of the rear wheel centerline.</li>
+                <li><strong>Airfoil Selection:</strong> Conducted 2D CFD screenings across UIUC airfoils (S1223, MSHD, NACA 6412, NACA 4412). Selected S1223 for high camber at low Reynolds numbers (\(Re \approx 250,000\)).</li>
+                <li><strong>Tire Wake Mitigation:</strong> Designed endplate Gurney flaps and slot gaps to energize boundary layer flow over upper elements and isolate the wing from turbulent rear tire wake.</li>
+            </ul>
+        </div>
+
+        <!-- CAD & Airfoil Selection Showcase -->
+        <h3 class="category-heading">CAD Assembly & Airfoil Profiling</h3>
+        <div class="media-gallery-grid">
+            <figure class="figure-card contain-img">
+                <img src="images/rear-wing/rear-wing-cad-banner.png" alt="NFR24 Rear Wing Assembly SolidWorks 3D Rendering">
+                <figcaption>
+                    <strong>Figure 1: Full Rear Wing SolidWorks 3D Assembly</strong>
+                    Complete 4-element rear wing assembly featuring carbon fiber endplates, swan-neck main mounts, and tension cable supports.
+                </figcaption>
+            </figure>
+            <figure class="figure-card contain-img">
+                <img src="images/rear-wing/uiuc-airfoil-comparison.png" alt="2D Airfoil Profile Comparison in UIUC Database">
+                <figcaption>
+                    <strong>Figure 2: UIUC Airfoil Geometry Comparison</strong>
+                    2D sectional profiles comparing S1223 main foil against secondary flaps (MSHD & NACA series).
+                </figcaption>
+            </figure>
+            <figure class="figure-card contain-img">
+                <img src="images/rear-wing/wing-mount-swan-neck-cad.png" alt="Swan Neck Carbon Mount SolidWorks CAD Model">
+                <figcaption>
+                    <strong>Figure 3: Swan-Neck Carbon Mount CAD</strong>
+                    Optimized swan-neck mounting bracket attaching to top suction side of main foil to preserve bottom pressure surface airflow.
+                </figcaption>
+            </figure>
+        </div>
+
+        <!-- Siemens Star CCM+ CFD & Mesh Diagnostics -->
+        <div class="about-section">
+            <h2>Siemens Star CCM+ 3D CFD & Mesh Validation</h2>
+            <p>
+                To validate the aerodynamic downforce and drag coefficients, full-car 3D Reynolds-Averaged Navier-Stokes (RANS) simulations were executed in Siemens Star CCM+ with dynamic wheel rotation and moving ground boundary conditions.
+            </p>
+            <ul class="project-bullets">
+                <li><strong>Mesh Refinement:</strong> Trimmer mesh with 5 surface refinement levels and 12 prism layers around airfoil trailing edges.</li>
+                <li><strong>Mesh Quality Verification:</strong> Checked 4 critical Star CCM+ diagnostics to guarantee solution convergence:
+                    <ul>
+                        <li><em>Face Validity:</em> 1.0 (Zero negative volume faces).</li>
+                        <li><em>Cell Quality:</em> Minimum 0.32 (Exceeding 0.10 threshold).</li>
+                        <li><em>Skewness Angle:</em> Maximum 74.2° (Below 85° limit).</li>
+                        <li><em>Volume Change:</em> Maximum ratio 1.85 (Below 2.0 limit).</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="media-gallery-grid" style="margin-top: 24px;">
+                <figure class="figure-card contain-img">
+                    <img src="images/rear-wing/star-ccm-mesh-validation.png" alt="Siemens Star CCM+ Mesh Scene and Diagnostics">
+                    <figcaption>
+                        <strong>Figure 4: Star CCM+ Mesh Validation Scene</strong>
+                        Prism layer mesh detail and surface quality validation metrics around main foil and trailing edge flaps.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="images/rear-wing/star-ccm-cfd-streamlines.png" alt="Star CCM+ Velocity Streamlines and Pressure Contours">
+                    <figcaption>
+                        <strong>Figure 5: 3D CFD Velocity Streamlines & Pressure Distribution</strong>
+                        Full-car velocity field visualization in Star CCM+ depicting high-velocity suction under wing elements and low-turbulence wake propagation.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- OptimumLap Track Simulation & Structural Math -->
+        <div class="about-section">
+            <h2>Track Simulation & Structural Mechanics</h2>
+            <p>
+                Aerodynamic coefficients extracted from Star CCM+ (\(C_D A = 0.82\), \(C_L A = 2.45\)) were input into OptimumLap software simulating the 2019 FSAE Michigan Autocross track layout.
+            </p>
+            <p>
+                <strong>Lap Time Impact:</strong> The redesigned wing reduced total autocross lap time by 0.42 seconds compared to the baseline NFR23 configuration, providing a net gain of 38.5 competition points.
+            </p>
+
+            <h3 class="category-heading" style="font-size: 1.15rem; margin-top: 24px;">Structural Mechanics & Hand Calculations</h3>
+            <div class="media-gallery-grid">
+                <figure class="figure-card contain-img">
+                    <img src="images/rear-wing/optimum-lap-sim-table.png" alt="OptimumLap Lap Time Comparison Table">
+                    <figcaption>
+                        <strong>Figure 6: OptimumLap Simulation Lap Time Output</strong>
+                        Lap time and cornering speed comparison across aero configurations on Michigan Autocross track.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="images/rear-wing/structural-bending-calculations.jpg" alt="Free Body Diagram and Hand Calculations for Rear Wing Mount Bending Moment">
+                    <figcaption>
+                        <strong>Figure 7: Bending Moment Hand Calculations</strong>
+                        Analytical free body diagram and shear/bending stress analysis verifying factor of safety \(FOS > 2.2\) under maximum downforce load.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Manufacturing & FMEA -->
+        <div class="about-section">
+            <h2>Composite Tooling, FMEA & Bill of Materials</h2>
+            
+            <div class="media-gallery-grid">
+                <figure class="figure-card">
+                    <img src="images/rear-wing/mdf-mold-routing-cnc.jpg" alt="MDF Male Mold CNC Routing for Rear Wing Airfoil">
+                    <figcaption>
+                        <strong>Figure 8: CNC MDF Mold Routing</strong>
+                        Precision 3-axis CNC milling of high-density MDF male mold blocks for wing main element.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card">
+                    <img src="images/rear-wing/carbon-fiber-vacuum-layup.jpg" alt="Carbon Fiber Layup under Vacuum Pressure">
+                    <figcaption>
+                        <strong>Figure 9: Vacuum Bagging Layup</strong>
+                        3-Layer carbon fiber wet layup debulking under 29 inHg vacuum to achieve optimal fiber-to-resin ratio.
+                    </figcaption>
+                </figure>
+            </div>
+
+            <h3 class="category-heading" style="font-size: 1.15rem; margin-top: 28px;">Failure Modes and Effects Analysis (FMEA)</h3>
+            <div class="tech-table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Failure Mode / Scenario</th>
+                            <th>Potential Impact</th>
+                            <th>Prevention Strategy</th>
+                            <th>Detection & Solution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mounting bolt shear under drag load</td>
+                            <td>Wing detachment on track</td>
+                            <td>Grade 8.8 steel hardware; FOS > 3.0</td>
+                            <td>Pre-race torque inspection & safety tether</td>
+                        </tr>
+                        <tr>
+                            <td>Airfoil delamination at high speed</td>
+                            <td>Loss of aerodynamic downforce</td>
+                            <td>Debulking vacuum cycles; post-cure thermal bake</td>
+                            <td>Tap testing & visual ultrasonic scan</td>
+                        </tr>
+                        <tr>
+                            <td>Cable tension relaxation during endurance</td>
+                            <td>Wing flutter / angle of attack shift</td>
+                            <td>Turnbuckle locking nuts & pre-stretched wire</td>
+                            <td>Pre-run cable tension gauge check</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="category-heading" style="font-size: 1.15rem; margin-top: 28px;">Parts List & Cost Bill of Materials (BOM)</h3>
+            <div class="tech-table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Item Description</th>
+                            <th>Material / Spec</th>
+                            <th>Qty</th>
+                            <th>Unit Cost</th>
+                            <th>Total Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3K 2x2 Twill Carbon Fiber Fabric</td>
+                            <td>Composites Envis. 6oz</td>
+                            <td>5 yards</td>
+                            <td>$45.00</td>
+                            <td>$225.00</td>
+                        </tr>
+                        <tr>
+                            <td>Epoxy Resin & Hardener System</td>
+                            <td>West System 105/206</td>
+                            <td>1 gal</td>
+                            <td>$120.00</td>
+                            <td>$120.00</td>
+                        </tr>
+                        <tr>
+                            <td>MDF Mold Tooling Stock</td>
+                            <td>3/4" High Density MDF</td>
+                            <td>4 sheets</td>
+                            <td>$35.00</td>
+                            <td>$140.00</td>
+                        </tr>
+                        <tr>
+                            <td>Swan Neck Aluminum Mount Brackets</td>
+                            <td>6061-T6 Aluminum CNC</td>
+                            <td>2 pcs</td>
+                            <td>$180.00</td>
+                            <td>$360.00</td>
+                        </tr>
+                        <tr>
+                            <td>Aircraft Grade Support Cables & Turnbuckles</td>
+                            <td>316 SS 1/8" Wire</td>
+                            <td>1 set</td>
+                            <td>$85.00</td>
+                            <td>$85.00</td>
+                        </tr>
+                        <tr style="font-weight: bold; background-color: #eff6ff;">
+                            <td colspan="4">Total Rear Wing Project Expenditure</td>
+                            <td>$930.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons Footer -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px; flex-wrap: wrap; gap: 16px;">
+            <a href="fsae-aero-package.html" class="btn-back">
+                ← Previous Report: FSAE Aero Package
+            </a>
+            <a href="shrouded-fan-opt.html" class="btn-project-report">
+                Next Project Report: Shrouded Fan Optimization →
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:danishgalebotswe2026@u.northwestern.edu">Email: danishgalebotswe2026@u.northwestern.edu</a>
+            <a href="https://www.linkedin.com/in/danish-galebotswe/" target="_blank">LinkedIn Profile</a>
+            <a href="Danish Galebotswe Resume.pdf" target="_blank">Resume PDF</a>
+        </div>
+        <p>© 2026 Danish Galebotswe | Mechanical Engineering Portfolio</p>
+    </footer>
+
+</body>
+
+</html>

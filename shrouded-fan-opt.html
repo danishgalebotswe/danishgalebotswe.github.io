@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shrouded Fan Aerodynamic Bayesian Optimization | Danish Galebotswe</title>
+    <meta name="description" content="In-depth technical report on Shrouded Fan Aerodynamic Bayesian Optimization, SolidWorks API + ANSYS Fluent automation, Gaussian Process surrogate modeling, and 10D design space exploration by Danish Galebotswe.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Danish Galebotswe</h1>
+        <p>Mechanical Engineering | Aerodynamics | CAD/CAM | Mechatronics | Machine Learning</p>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- Back Navigation Bar -->
+        <div class="back-link-bar">
+            <a href="projects.html#shrouded-fan-opt" class="btn-back">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Back to Projects
+            </a>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="project-detail-hero">
+            <div class="project-meta-pills">
+                <span class="meta-pill">Engineering Optimization</span>
+                <span class="meta-pill">GRAY Chicago Art Gallery</span>
+                <span class="meta-pill">January 2025 – March 2025</span>
+            </div>
+            <h1 style="margin-top: 14px;">Shrouded Fan Aerodynamic Bayesian Optimization</h1>
+            <p class="subtitle">
+                High-dimensional optimization of a shrouded axial ceiling fan system integrating SolidWorks CAD API, ANSYS Fluent 3D CFD, Latin Hypercube Sampling, Gaussian Process surrogate models, and Bayesian Optimization.
+            </p>
+            <div class="tags" style="margin-bottom: 0;">
+                <span class="tag" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">SolidWorks API + Python</span>
+                <span class="tag" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">ANSYS Fluent CFD</span>
+                <span class="tag" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">Gaussian Process (Matérn Kernel)</span>
+                <span class="tag" style="background: rgba(255,255,255,0.15); color: #ffffff; border-color: rgba(255,255,255,0.3);">Bayesian Optimization (EI)</span>
+            </div>
+        </div>
+
+        <!-- Key Metrics Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="number">21.6 m³/s</div>
+                <div class="label">Peak Volumetric Airflow Achieved</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">10D Vector</div>
+                <div class="label">Parameterized Geometry Variables</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">Automated</div>
+                <div class="label">SolidWorks to ANSYS Fluent CFD Pipeline</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">Matérn 5/2</div>
+                <div class="label">GP Surrogate Model Covariance</div>
+            </div>
+        </div>
+
+        <!-- Project Objective & Client Scope -->
+        <div class="about-section">
+            <h2>Project Objective & Art Gallery Context</h2>
+            <p>
+                Our client, Nick Raffel, designed a custom architectural ventilation installation aiming to maximize passive airflow circulation within the GRAY Chicago art gallery. Standard commercial ceiling fans lacked optimization for high-efficiency volumetric discharge within a cylindrical shroud enclosure.
+            </p>
+            <p>
+                The objective was to formulate and solve a rigorous aerodynamic optimization problem maximizing volumetric flow rate (\(Q\)) while keeping fan acoustic noise and rotational motor torque constrained.
+            </p>
+
+            <div class="media-gallery-grid" style="margin-top: 24px;">
+                <figure class="figure-card contain-img">
+                    <img src="images/shrouded-fan/gray-art-gallery-plan.jpg" alt="GRAY Chicago Art Gallery Architectural Floor Plan">
+                    <figcaption>
+                        <strong>Figure 1: GRAY Chicago Art Gallery Layout</strong>
+                        Architectural floor plan specifying spatial dimensions and ceiling ventilation installation site.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="images/shrouded-fan/shrouded-fan-cad-3d.png" alt="3D Shrouded Fan Assembly CAD Render">
+                    <figcaption>
+                        <strong>Figure 2: Shrouded Fan SolidWorks CAD Render</strong>
+                        3D SolidWorks assembly of optimized 5-blade axial fan enclosed within an aerodynamic shroud ring.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- 10D Design Parameterization & NACA Airfoil Formulation -->
+        <div class="about-section">
+            <h2>10-Dimensional Design Parameterization & Math Formulation</h2>
+            <p>
+                To allow wide variation in blade twist, taper, and cross-sectional camber while ensuring smooth manufacturable surfaces, the fan geometry was parameterized into a 10-dimensional design vector \(\mathbf{x} \in \mathbb{R}^{10}\):
+            </p>
+
+            <div class="math-box">
+                \(\mathbf{x} = [ f_{\text{camber}}, x_f, t_{\text{thick}}, c_{\text{root}}, c_{\text{tip}}, \theta_{\text{twist}}, r_{\text{hub}}, N_{\text{blades}}, \text{Sweep}, \text{Shroud Gap} ]\)
+            </div>
+
+            <p>
+                Mean camber line coordinates for generalized NACA 4-digit airfoil profiles were calculated via parabolic equations:
+            </p>
+            <div class="math-box">
+                y_c = \begin{cases} 
+                \frac{f}{x_f^2} (2 x_f x - x^2), & 0 \le x \le x_f \\
+                \frac{f}{(1-x_f)^2} \left[ (1 - 2 x_f) + 2 x_f x - x^2 \right], & x_f \le x \le 1 
+                \end{cases}
+            </div>
+
+            <div class="media-gallery-grid" style="margin-top: 24px;">
+                <figure class="figure-card contain-img">
+                    <img src="images/shrouded-fan/airfoil-design-parameters.png" alt="NACA Airfoil Parameters Diagram">
+                    <figcaption>
+                        <strong>Figure 3: Airfoil Parameterization Schematic</strong>
+                        Diagram depicting camber height \(f\), location of max camber \(x_f\), and thickness distribution \(t\).
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="images/shrouded-fan/fan-hub-geometry-model.png" alt="Fan Hub and Blade Dimension Parameters Model">
+                    <figcaption>
+                        <strong>Figure 4: Fan Size & Hub Geometry Model</strong>
+                        3D CAD parameters defining hub radius ratio, blade pitch angle, and tip clearance relative to the shroud.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="images/shrouded-fan/naca-airfoil-generation.png" alt="Automated NACA Airfoil Generation Coordinate Plot">
+                    <figcaption>
+                        <strong>Figure 5: NACA Airfoil Profile Generation</strong>
+                        Generated upper (\(x_U, y_U\)) and lower (\(x_L, y_L\)) surface coordinate points for automated CAD lofting.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Sampling, Surrogate Modeling & Bayesian Optimization -->
+        <div class="about-section">
+            <h2>Latin Hypercube Sampling & Gaussian Process Surrogate</h2>
+            <p>
+                Evaluating full 3D ANSYS Fluent CFD simulations takes ~25 minutes per geometry design. To efficiently search the 10D space without requiring thousands of costly CFD evaluations, we implemented a surrogate-assisted Bayesian Optimization framework:
+            </p>
+            <ul class="project-bullets">
+                <li><strong>Latin Hypercube Sampling (LHS):</strong> Sampled initial space using <code>scipy.stats.qmc.LatinHypercube</code> to guarantee space-filling uniform coverage across all 10 bounds.</li>
+                <li><strong>Gaussian Process (GP) Regression:</strong> Constructed a GP surrogate model with a Matérn 5/2 covariance kernel:
+                    <div class="math-box" style="margin: 12px 0;">
+                        k(x, x') = \sigma^2 \left(1 + \frac{\sqrt{5}d}{l} + \frac{5d^2}{3l^2}\right) \exp\left(-\frac{\sqrt{5}d}{l}\right)
+                    </div>
+                </li>
+                <li><strong>Hyperparameter Tuning:</strong> Optimized length scales \(l\) using Differential Evolution to minimize negative log marginal likelihood.</li>
+                <li><strong>Bayesian Acquisition Function:</strong> Selected sequential evaluation points by maximizing Expected Improvement (EI):
+                    <div class="math-box" style="margin: 12px 0;">
+                        \text{EI}(x) = (\mu(x) - f(x^+) - \xi)\Phi(Z) + \sigma(x)\phi(Z)
+                    </div>
+                </li>
+            </ul>
+
+            <div class="media-gallery-grid" style="margin-top: 24px;">
+                <figure class="figure-card contain-img">
+                    <img src="images/shrouded-fan/latin-hypercube-sampling.png" alt="Latin Hypercube Sampling Scatter Plot Matrix">
+                    <figcaption>
+                        <strong>Figure 6: Latin Hypercube Sampling Space Coverage</strong>
+                        2D projection of 10D LHS sample points demonstrating uniform exploration across design variable bounds.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="images/shrouded-fan/gaussian-process-surrogate.png" alt="Gaussian Process Response Surface and Confidence Intervals">
+                    <figcaption>
+                        <strong>Figure 7: Gaussian Process Surrogate Response Surface</strong>
+                        3D response surface and 95% confidence variance prediction for volumetric flow rate vs blade twist & chord.
+                    </figcaption>
+                </figure>
+                <figure class="figure-card contain-img">
+                    <img src="images/shrouded-fan/bayesian-opt-convergence.png" alt="Bayesian Optimization Expected Improvement Convergence Curve">
+                    <figcaption>
+                        <strong>Figure 8: Optimization Convergence History</strong>
+                        Iteration convergence plot showing volumetric airflow progression reaching peak \(\approx 21.6 \text{ m}^3/\text{s}\).
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- ANSYS Fluent CFD Validation -->
+        <div class="about-section">
+            <h2>3D ANSYS Fluent CFD Validation</h2>
+            <p>
+                The optimal design candidate selected by Bayesian Optimization was subjected to full-mesh validation in ANSYS Fluent using the \(k\text{-}\omega \text{ SST}\) turbulence model. 
+            </p>
+            <p>
+                <strong>Results:</strong> Physical CFD verification confirmed a maximum discharge flow rate of <strong>21.64 m³/s</strong>, matching the Gaussian Process surrogate prediction within 1.8% error margin.
+            </p>
+
+            <div class="media-gallery-grid" style="margin-top: 24px;">
+                <figure class="figure-card contain-img">
+                    <img src="images/shrouded-fan/cfd-velocity-contour.png" alt="ANSYS Fluent Velocity Vector Contour for Shrouded Fan">
+                    <figcaption>
+                        <strong>Figure 9: ANSYS Fluent CFD Velocity Vector Field</strong>
+                        Cross-sectional velocity vector contour through shrouded fan domain demonstrating uniform axial outflow jet creation.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons Footer -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px; flex-wrap: wrap; gap: 16px;">
+            <a href="rear-wing-redesign.html" class="btn-back">
+                ← Previous Report: Rear Wing Redesign
+            </a>
+            <a href="experience.html" class="btn-project-report">
+                Return to Experience Page →
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:danishgalebotswe2026@u.northwestern.edu">Email: danishgalebotswe2026@u.northwestern.edu</a>
+            <a href="https://www.linkedin.com/in/danish-galebotswe/" target="_blank">LinkedIn Profile</a>
+            <a href="Danish Galebotswe Resume.pdf" target="_blank">Resume PDF</a>
+        </div>
+        <p>© 2026 Danish Galebotswe | Mechanical Engineering Portfolio</p>
+    </footer>
+
+</body>
+
+</html>
